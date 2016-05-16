@@ -1,0 +1,11 @@
+<template>
+    <!-- template html here -->    
+</template>
+
+<script>
+  export default {}
+</script>
+
+<style scoped>
+    /* style here */
+</style>
