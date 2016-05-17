@@ -80,6 +80,8 @@ module.exports = {
     formatter: require('eslint-friendly-formatter')
   },
   vue: {
-    loaders: utils.cssLoaders()
+    postcss: [require('postcss-cssnext')],
+    autoprefixer: false
+    // loaders: utils.cssLoaders()
   }
 }

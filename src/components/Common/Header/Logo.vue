@@ -8,6 +8,16 @@
   export default {}
 </script>
 
-<style scoped>
-    /* style here */
+<style lang="postcss">
+:root {
+  --left: 30px;
+}
+
+.logo {
+  margin-left: var(--left);
+
+  & > img {
+    width:100px;
+  }
+}
 </style>
