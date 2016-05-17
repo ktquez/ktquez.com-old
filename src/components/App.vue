@@ -1,11 +1,16 @@
-<template>
-    
+<template>    
+    <Top></Top>
+    <!-- menu mobile | absolute -->
+    <!-- social media | absolute -->
+    <router-view></router-view>
 </template>
 
 <script>
-  export default {}
+  import Top from './Common/Header/index'
+
+  export default {
+    components: { Top }
+  }
 </script>
 
-<style scoped>
-    /* style here */
-</style>
+<style></style>
