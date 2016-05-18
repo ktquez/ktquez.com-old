@@ -1,8 +1,8 @@
 <template>
-  <div class="full">      
-    <Logo></Logo>
-    <Menu></Menu>
-  </div>   
+  <header class="fullX header">      
+    <logo></logo>
+    <menu></menu>
+  </header>   
 </template>
 
 <script>
@@ -17,9 +17,9 @@
 </script>
 
 <style>
-  .full {
-    width: 100%;
-    float: left;
-    position: relative;
+  .header{
+    height: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
 </style>
