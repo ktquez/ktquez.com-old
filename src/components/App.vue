@@ -5,37 +5,36 @@
       <social></social>
       <router-view></router-view>
     </div>
+    <overlay zindex="9" position="absolute"></overlay>
 </template>
 
 <script>
   import Top from './Common/Header/index'
   import MenuMobile from './Common/NavMobile'
   import Social from './Common/Social'
+  import Overlay from './Common/Overlay'
 
   export default {
     components: {
       Top,
       MenuMobile,
-      Social
+      Social,
+      Overlay
     }
   }
 </script>
 
 <style lang="postcss">
-  @import "../assets/noDoubt.min.css";
-  @import "../assets/fonts.css";
+  @import "../assets/css/noDoubt.css";
+  @import "../assets/css/fonts.css";
   
   :root {
     --bg-body: #f2f2f2;
   }
 
   body {
-    font-family: Merriweather, Calibri, Arial;
-    background-color: var(--bg-body);
-  }
-
-  h1, h2, h3 {
     font-family: Varela Round, Calibri, Arial;
+    background-color: var(--bg-body);
   }
 
 </style>
