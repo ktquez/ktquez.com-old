@@ -1,5 +1,5 @@
 <template>
-  <nav class="c-m6 cpl">
+  <nav>
     <ul class="navbar centerX fl">
       <li class="item">
         <a v-link="'about'" class="link">SOBRE</a>
@@ -40,7 +40,7 @@
       color: #666;
 
       &:hover {
-        color: #4AC6B7;
+        color: #4ac6b7;
       }
     }
   }
