@@ -1,0 +1,320 @@
+@charset "utf-8";
+
+/*  RESET
+-------------------------------------------------------------- */
+*{
+  margin:0;padding:0px;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
+}
+
+ol, 
+ul { 
+  list-style: none; 
+  margin-left:20px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a, 
+img {
+  text-decoration: none;
+  outline: none;
+  border: 0;
+}
+
+input,
+select,
+button,
+option,
+textarea {
+  border: none;
+  font-family: inherit;
+  background: none;
+  outline: none;
+}
+input:focus,
+select:focus,
+button:focus{ 
+  outline: none; 
+}
+
+input[type="submit"],
+button { 
+  cursor: pointer; 
+}
+
+::-moz-placeholder{ color: #999; }
+
+/*  DEFAULT
+-------------------------------------------------------------- */
+.clear-col { 
+  clear: both;
+  display: none;
+}
+
+.centerY { 
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.centerX { 
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.fullY { 
+  height: 100%;
+  position: relative;
+}
+
+.fullX { 
+  width: 100%;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+
+.fr { 
+  float: right;
+  position: relative;
+}
+
+.fl { 
+  float: left;
+  position: relative;
+}
+
+.tac { text-align: center;}
+
+.zindex { z-index: 999; }
+
+body {
+  -webkit-animation-duration: 0.1s;
+  -webkit-animation-name: fontfix;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0.1s;
+}
+@-webkit-keyframes fontfix {
+  from { opacity: 1; }
+  to { opacity: 1; }
+}
+
+/* iPad Input Shadows */
+input[type="text"], 
+input[type="email"], 
+input[type="search"], 
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none; /* mobile firefox too! */
+}
+
+/*  GRID
+-------------------------------------------------------------- */
+.full-box {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+[class^="box-center"],
+[class*="box-center"] {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 1;
+}
+
+.box-center9 { max-width: 94%; }
+.box-center8 { max-width: 80%; }
+.box-center7 { max-width: 70%; }
+.box-center6 { max-width: 60%; }
+.box-center5 { max-width: 50%; }
+
+.cpl { 
+  float: left;
+  min-height: 1px;
+  position: relative;
+}
+
+.abs {
+  min-height: 1px;
+  position: absolute;
+}
+
+.dnone-m {
+  display: none;
+}
+
+/* MEDIA QUERIES
+-------------------------------------------------------------- */
+
+.c-m1 { width: 8.33333333%; }
+.c-m2 { width: 16.66666667%; }
+.c-m3 { width: 25%; }
+.c-m4 { width: 33.33333333%; }
+.c-m5 { width: 41.66666667%; }
+.c-m6 { width: 50%; }
+.c-m7 { width: 58.33333333%; }
+.c-m8 { width: 66.66666667%; }
+.c-m9 { width: 75%; }
+.c-m10 { width: 83.33333333%; }
+.c-m11 { width: 91.66666667%; }
+.c-m12 { width: 100%; }
+
+@media only screen and (max-width: 480px) {
+  .view-m { display: block !important; }
+
+  [class^="box-center"],
+  [class*="box-center"] {
+    max-width: 94%;
+    padding: 0 3%;
+  }
+
+  .m-centerX {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .m-centerY {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .modal { overflow: scroll; }
+}
+
+@media only screen and (min-width: 481px) {
+  .c-t1 { width: 8.33333333%; }
+  .c-t2 { width: 16.66666667%; }
+  .c-t3 { width: 25%; }
+  .c-t4 { width: 33.33333333%; }
+  .c-t5 { width: 41.66666667%; }
+  .c-t6 { width: 50%; }
+  .c-t7 { width: 58.33333333%; }
+  .c-t8 { width: 66.66666667%; }
+  .c-t9 { width: 75%; }
+  .c-t10 { width: 83.33333333%; }
+  .c-t11 { width: 91.66666667%; }
+  .c-t12 { width: 100%; }
+  .view-t { display:block !important; }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 800px){
+  [class^="box-center"],
+  [class*="box-center"] { 
+    max-width: 94%;
+    padding: 0 3%;
+  }
+}
+
+@media only screen and (min-width: 801px){
+  .c-g1 { width: 8.33333333%; }
+  .c-g2 { width: 16.66666667%; }
+  .c-g3 { width: 25%; }
+  .c-g4 { width: 33.33333333%; }
+  .c-g5 { width: 41.66666667%; }
+  .c-g6 { width: 50%; }
+  .c-g7 { width: 58.33333333%; }
+  .c-g8 { width: 66.66666667%; }
+  .c-g9 { width: 75%; }
+  .c-g10 { width: 83.33333333%; }
+  .c-g11 { width: 91.66666667%; }
+  .c-g12 { width: 100%; }
+  .view-g { display: block !important; }
+  .dnone-g { display: none !important; }
+}
+
+@media only screen and (min-width: 1025px){
+  .c-gg1 { width: 8.33333333%; }
+  .c-gg2 { width: 16.66666667%; }
+  .c-gg3 { width: 25%; }
+  .c-gg4 { width: 33.33333333%; }
+  .c-gg5 { width: 41.66666667%; }
+  .c-gg6 { width: 50%; }
+  .c-gg7 { width: 58.33333333%; }
+  .c-gg8 { width: 66.66666667%; }
+  .c-gg9 { width: 75%; }
+  .c-gg10 { width: 83.33333333%; }
+  .c-gg11 { width: 91.66666667%; }
+  .c-gg12 { width: 100%; }
+  .view-gg { display: block !important; }
+  .dnone-gg { display: none !important; }
+}
+
+/* IMAGES
+-------------------------------------------------------------- */
+.img-circle { 
+  border-radius: 50%;
+  overflow: hidden; 
+}
+
+.img-circle > .small { 
+  width: 32px;
+  height: 32px; 
+}
+
+.img-circle > .medium { 
+  width: 64px;
+  height: 64px; 
+}
+
+.img-circle > .big { 
+  width: 120px;
+  height: 120px; 
+}
+
+/* LISTS
+-------------------------------------------------------------- */
+.list { 
+  float: left; 
+}
+
+.list > .item { 
+  display: inline;
+  float: left;
+}
+
+.list.-block > .item { 
+  display: block;
+  float: left;
+}
+
+/* FADE
+-------------------------------------------------------------- */
+[class^='fade-'] {
+  -webkit-transition-property: all;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+}
+.fade-fast {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.fade-half {
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.fade-slow {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
