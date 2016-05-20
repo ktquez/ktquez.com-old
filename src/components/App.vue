@@ -6,6 +6,7 @@
       <router-view></router-view>
       <foo></foo>
     </div>
+    <scroll-top></scroll-top>
     <overlay zindex="9" position="absolute"></overlay>
 </template>
 
@@ -15,14 +16,16 @@
   import Social from './Common/Social'
   import Overlay from './Common/Overlay'
   import Foo from './Common/Footer/index'
+  import ScrollTop from './Common/ScrollTop'
 
   export default {
     components: {
       Top,
       MenuMobile,
       Social,
-      Overlay,
-      Foo
+      Foo,
+      ScrollTop,
+      Overlay
     }
   }
 </script>

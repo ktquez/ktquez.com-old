@@ -2,7 +2,7 @@
   <footer class="footer fullX">
     <div class="box-center6 center">
       <menu :class="['navbar-footer']"></menu>         
-      <page-info></page-info>               
+      <page-info :class="['info']"></page-info>               
     </div>
   </footer>
 </template>
@@ -36,7 +36,7 @@
   }
 
   .navbar-footer {
-    margin-top: 14px;
+    margin-top: 22px;
   }
 
    @media (--small-viewport) {
@@ -52,6 +52,11 @@
         color: #4ac6b7;
       }
     }
+  }
+
+  .info {
+    margin-top: 24px;
+    margin-bottom: 10px;
   }
 
 </style>
