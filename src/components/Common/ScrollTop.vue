@@ -13,8 +13,14 @@
           el.classList.add('-fire')
         }
 
+        // IE
+        if (!window.requestAnimationFrame) {
+          window.scrollTo(0, 0)
+          return
+        }
+
         function animate () {
-          let progress = window.scrollY - 30
+          let progress = window.scrollY - 100
           window.scrollTo(0, progress)
 
           // End animation
