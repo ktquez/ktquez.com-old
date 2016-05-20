@@ -4,6 +4,7 @@
       <menu-mobile></menu-mobile>
       <social></social>
       <router-view></router-view>
+      <foo></foo>
     </div>
     <overlay zindex="9" position="absolute"></overlay>
 </template>
@@ -13,13 +14,15 @@
   import MenuMobile from './Common/NavMobile'
   import Social from './Common/Social'
   import Overlay from './Common/Overlay'
+  import Foo from './Common/Footer/index'
 
   export default {
     components: {
       Top,
       MenuMobile,
       Social,
-      Overlay
+      Overlay,
+      Foo
     }
   }
 </script>
@@ -33,6 +36,7 @@
     --font: Roboto, Calibri, Arial;
     --font-title: 'Varela Round', Calibri, Arial;
     --font-article: Merriweather, Calibri, Arial;
+    --link: #4ac6b7;
   }
 
   body {
@@ -40,6 +44,10 @@
     background-color: var(--bg-body);
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  .link {
+    color: var(--link);
   }
 
   .lspacing {
