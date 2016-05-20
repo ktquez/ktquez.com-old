@@ -1,10 +1,10 @@
 <template>
   <header class="fullX header">  
-    <div class="c-m12 c-t2 c-g3 cpl">
+    <div class="c-m12 c-t2 c-gg3 cpl">
       <logo></logo>      
     </div> 
-    <div class="c-m6 c-t9 c-g6 cpl dnone-m view-t">
-      <menu></menu>      
+    <div class="c-t10 c-gg6 cpl dnone-m view-t">
+      <menu :class="['navbar-header']"></menu>
     </div>   
   </header>   
 </template>
@@ -21,10 +21,26 @@
 </script>
 
 <style>
+  
+  :root {
+    @custom-media --medium-viewport (max-width: 1024px);     
+  }
+
   .header{
     height: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #ededed;
+  }
+
+  .navbar-header {
+    margin-top: 14px;
+  }
+
+  @media (--medium-viewport) {
+    .navbar-header{
+      float: right;
+      margin-right: 20px;
+    }
   }
 </style>
