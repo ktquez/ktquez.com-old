@@ -32,6 +32,7 @@
     right: 20px;
     width: 30px;
     height: 100px;
+    z-index: 5;
     
     &.-fixed { position: fixed; }
 
