@@ -25,23 +25,39 @@
 </script>
 
 <style lang="postcss">
-  .navbar {
-    margin-top:14px;
+  :root {
+    @custom-media --medium-viewport (max-width: 800px);     
   }
 
-  .item {
-    display:inline;
-    font-family: Varela Round, Calibri, Arial;
-    font-size: 13px;
-    letter-spacing: .5px;
-    margin-right: 30px;
+  .navbar {
+    margin-top: 14px;
+    margin-left: 6px;
 
-    & > .link {
-      color: #666;
+    & > .item {
+      display:inline;
+      font-family: Varela Round, Calibri, Arial;
+      font-size: 13px;
+      letter-spacing: .5px;
+      margin-right: 30px;
 
-      &:hover {
-        color: #4ac6b7;
+      & > .link {
+        color: #666;
+        transition: color .3s;
+
+        &:hover {
+          color: #4ac6b7;
+        }
       }
     }
   }
+  
+  @media (--medium-viewport) {
+    .navbar {
+      float: right;
+      margin-right: 20px;
+    }
+  }
+
+
+  
 </style>

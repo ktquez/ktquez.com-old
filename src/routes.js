@@ -6,18 +6,23 @@ import Contact from './components/Pages/Contact'
 
 export const routes = {
   '*': {
+    name: 'home',
     component: Home
   },
   '/about': {
+    name: 'bio',
     component: Bio
   },
   '/projects': {
+    name: 'projects',
     component: Projects
   },
   '/lab': {
+    name: 'lab',
     component: Lab
   },
   '/contact': {
+    name: 'contact',
     component: Contact
   }
   /*

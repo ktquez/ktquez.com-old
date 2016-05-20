@@ -30,11 +30,29 @@
   
   :root {
     --bg-body: #f2f2f2;
+    --font: Roboto, Calibri, Arial;
+    --font-title: 'Varela Round', Calibri, Arial;
+    --font-article: Merriweather, Calibri, Arial;
   }
 
   body {
-    font-family: Varela Round, Calibri, Arial;
+    font-family: var(--font);
     background-color: var(--bg-body);
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .lspacing {
+    letter-spacing: .5px;    
+  }
+
+  .article {
+    font-family: var(--font-article);
+  }
+
+  .title { 
+    font-family: var(--font-title);
+    font-weight: bold; 
   }
 
 </style>

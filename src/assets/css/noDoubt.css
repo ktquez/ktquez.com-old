@@ -14,7 +14,6 @@
 ol, 
 ul { 
   list-style: none; 
-  margin-left:20px;
 }
 
 table {
@@ -267,17 +266,17 @@ input[type="password"] {
   overflow: hidden; 
 }
 
-.img-circle > .small { 
+.img-circle.-small { 
   width: 32px;
   height: 32px; 
 }
 
-.img-circle > .medium { 
+.img-circle.-medium { 
   width: 64px;
   height: 64px; 
 }
 
-.img-circle > .big { 
+.img-circle.-big { 
   width: 120px;
   height: 120px; 
 }

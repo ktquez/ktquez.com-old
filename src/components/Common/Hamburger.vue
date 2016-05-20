@@ -54,7 +54,7 @@
     &:hover > .inner, 
     &:hover > .inner:before,
     &:hover > .inner:after{
-      background-color: #ff7070;
+      background-color: #4ac6b7;
     }
     
     & > .inner,

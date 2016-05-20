@@ -15,10 +15,11 @@
     --color: #666;   
 
     @custom-media --small-viewport (max-width: 480px); 
+    @custom-media --medium-viewport (max-width: 800px); 
   }
 
   .logo > .k-box {
-      margin-left: 25%;
+      margin-left: 80px;
       width: 50px;
       height: 50px; 
       float: left;
@@ -26,12 +27,10 @@
     }
 
   @media (--small-viewport) {
-    .logo {
-      & > .k-box {
-        margin-left: 5px;
-        left: 50%; 
-        transform: translateX(-50%);
-      }
+    .logo > .k-box {
+      margin-left: 5px;
+      left: 50%; 
+      transform: translateX(-50%);
     }
   }
 
