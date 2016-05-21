@@ -6,6 +6,17 @@
 
 <script>
   export default {
+    ready () {
+      // Display arrow back to top
+      const el = document.querySelector('.back-scrolltop')
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 400) {
+          el.classList.add('-show')
+          return
+        }
+        el.classList.remove('-show')
+      }, false)
+    },
     methods: {
       fire (e) {
         let el = e.target.offsetParent || e.target
@@ -43,6 +54,8 @@
     bottom: 100px;
     position: fixed;
     z-index: 9;
+    display: none;
+
     
     border-radius: 50%;
     background: color(white alpha(50%));
@@ -57,6 +70,10 @@
     
     &.-fire {
       animation: fire 1s linear infinite;
+    }
+
+    &.-show {
+      display: block;
     }
 
   }
