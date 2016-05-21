@@ -3,7 +3,9 @@
       <top></top>
       <menu-mobile></menu-mobile>
       <social></social>
-      <router-view></router-view>
+      <router-view
+        transition="fade"
+        transition-mode="out-in"></router-view>
       <foo></foo>
     </div>
     <scroll-top></scroll-top>
@@ -47,6 +49,14 @@
     background-color: var(--bg-body);
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  .fade-transition {
+    transition: opacity .5s ease;
+  }
+
+  .fade-enter, .fade-leave {
+    opacity: 0;
   }
 
   .link {
