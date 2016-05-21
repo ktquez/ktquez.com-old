@@ -5,7 +5,7 @@ import Lab from './components/Pages/Lab'
 import Contact from './components/Pages/Contact'
 
 export const routes = {
-  '*': {
+  '/': {
     name: 'home',
     component: Home
   },
@@ -26,13 +26,11 @@ export const routes = {
     component: Contact
   }
   /*
-    BIO             (SOBRE)
     BLOG            (LISTAGEM DE ARTIGOS = HOME)
     BLOG/:SLUG      (ARTIGO ESPECÍFICO)
     LAB             (POSTERIORMENTE, EXPERIÊNCIAS COM DEMOS = CODROPS/CODEHOUSE E ETC)
     LAB/:PROJECT
     PROJECTS        (GITHUB/PORTIFOLIO)
     PROJECTS/:SLUG
-    CONTACT         (FORM DE CONTATO)
    */
 }
