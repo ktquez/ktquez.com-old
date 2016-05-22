@@ -27,7 +27,7 @@
 
 <style lang="postcss">
   .social {
-    position: absolute;
+    position: fixed;
     top: 90px;
     right: 20px;
     width: 30px;
