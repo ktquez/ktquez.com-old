@@ -40,7 +40,7 @@
     --bg-body: #f2f2f2;
     --font: Roboto, Calibri, Arial;
     --font-title: 'Varela Round', Calibri, Arial;
-    --font-article: Merriweather, Calibri, Arial;
+    --font-article: 'Lora', Calibri, Arial;
     --link: #4ac6b7;
   }
 
@@ -67,13 +67,17 @@
     letter-spacing: .5px;    
   }
 
-  .article {
+  .article, .content-page {
     font-family: var(--font-article);
   }
 
   .title { 
     font-family: var(--font-title);
     font-weight: bold; 
+  }
+
+  .content-page{
+    margin-top: 50px;
   }
 
 </style>
