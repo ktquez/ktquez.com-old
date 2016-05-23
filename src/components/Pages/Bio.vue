@@ -118,7 +118,7 @@
           <h2 class="fullX title">CONTATO</h2>          
           <p class="txt">
           Sou capaz de ajudá-lo nessas tecnologias, caso queira entrar em contato para batermos um papo, tirar alguma dúvida ou disposição para me contratar
-          <br> Me siga no <b>Twitter:</b> <a class="link" href="https://twitter.com/ktquez" target="_blank">@ktquez</a>, no <b>Github:</b> <a class="link" href="https://github.com/ktquez" target="_blank">@ktquez</a> e/ou através do <a class="link" v-link="{ name: 'contact' }">@form</a>
+          <br> Me siga no <b>Twitter:</b> <a class="link" href="https://twitter.com/ktquez" target="_blank">@ktquez</a>, no <b>Github:</b> <a class="link" href="https://github.com/ktquez" target="_blank">@ktquez</a> e/ou através do <a class="link" href="mailto:ktquez@gmail.com">ktquez@gmail.com</a>
           </p>
 
         </div>
