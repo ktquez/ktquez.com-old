@@ -2,8 +2,8 @@
   <div class="tac">
     <div class="c-m12 cpl top-page">
       <strong class="fullX title">{{ title }}</strong>
-      <div class="fullX description">
-        <p class="box-center7 lspacing">
+      <div class="fullX">
+        <p class="box-center7 description lspacing">
           {{ description }}
         </p>              
       </div>
@@ -35,11 +35,9 @@
       margin-bottom: 10px;
     }
 
-    & > .description {
+    & .description {
       margin-top: 10px;
-      font-weight: 300;
-      font-size: 14px;
-      color: #666;
+      font-size: 13px;
     }
   }
 </style>

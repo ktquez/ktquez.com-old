@@ -31,7 +31,7 @@
           </p>            
 
           <h2 class="fullX title">NO QUE ESTOU FOCADO</h2>
-          <ul class="fullX txt list-focused">
+          <ul class="fullX txt">
             <li>
               Trabalho Remoto
             </li>
@@ -56,7 +56,7 @@
           </ul>
 
           <h2 class="fullX title">MINHAS HABILIDADES SÃO</h2>
-          <ul class="fullX txt list-focused">
+          <ul class="fullX txt">
             <li>
               <a href="">PHP</a>
             </li>
@@ -87,7 +87,7 @@
           </ul>
 
           <h2 class="fullX title">CONHECIMENTO BÁSICO EM</h2>
-          <ul class="fullX txt list-focused">
+          <ul class="fullX txt">
             <li>
               <a href="">ElasticSearch</a>
             </li>

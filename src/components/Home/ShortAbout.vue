@@ -7,7 +7,7 @@
       <strong class="fullX title nickname">[ ktquez ]</strong>      
       <strong class="fullX title name">ALAN ALBUQUERQUE</strong>
       <div class="fullX about-me">
-        <p class="box-center7 lspacing">
+        <p class="box-center7 lspacing description">
           Freelancer web developer PHP e Javascript, espírito empreendedor, autodidata e amo desenvolver sobre novas tecnologias 
           <br>(Laravel e Vue.js, this is pretty cool)
         </p>              
@@ -35,10 +35,7 @@
     }
 
     & > .about-me {
-      margin-top: 10px;
-      font-weight: 300;
-      font-size: 14px;
-      color: #666;
+      margin-top: 10px;      
     }
   }
 </style>

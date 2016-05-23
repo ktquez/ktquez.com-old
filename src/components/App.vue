@@ -38,7 +38,7 @@
   
   :root {
     --bg-body: #f2f2f2;
-    --font: Roboto, Calibri, Arial;
+    --font: Raleway, Calibri, 'trebuchet MS';
     --font-title: 'Varela Round', Calibri, Arial;
     --font-article: 'Lora', Calibri, Arial;
     --link: #4ac6b7;
@@ -67,7 +67,7 @@
     letter-spacing: .5px;    
   }
 
-  .article, .content-page {
+  .article {
     font-family: var(--font-article);
   }
 
@@ -76,8 +76,17 @@
     font-weight: bold; 
   }
 
+  .description {
+    font-weight: 300;
+    font-size: 14px;
+    color: #999;
+  }
+
   .top-page {
     padding-top: 20px;
+    & > .description {
+      font-family: var(--font-article);
+    }
   }
 
   .content-page{
