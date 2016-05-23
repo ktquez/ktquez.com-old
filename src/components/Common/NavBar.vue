@@ -12,10 +12,10 @@
       </li>
       <!-- <li class="item">
         <a v-link="'lab'" class="link">LAB</a>
-      </li>
+      </li> -->
       <li class="item">
         <a v-link="'contact'" class="link">CONTATO</a>
-      </li> -->
+      </li>
     </ul>
   </nav>
 </template>
