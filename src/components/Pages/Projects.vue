@@ -6,7 +6,53 @@
     <separate></separate>
     <section class="box-center5">
       <div class="fullX content-page">
-        <h2 class="fullX title">OPEN SOURCE</h2>
+        <div class="fullX margin-section">          
+          <h2 class="fullX title">OPEN SOURCE</h2>
+          <ul class="fullX txt list">
+            <li class="item">
+              <a class="link" title="Form validation in Javascript Vanilla, without dependencies and multiple languages" target="_blank" href="http://ktquez.github.io/Inspect/">
+                <b>Inspect form</b>
+              </a>
+              <p class="description">
+                Form validation in Javascript Vanilla, without dependencies and multiple languages. &lt; 3kb gzipped
+              </p>
+            </li>
+            <li class="item">
+              <a class="link" title="Cool and powerful effect to select fields. Javascript vanilla" target="_blank" href="http://ktquez.github.io/pickout/">
+                <b>Pickout</b>
+              </a>
+              <p class="description">
+                Cool and powerful effect to select fields. Javascript vanilla and ~2kb gzipped
+              </p>
+            </li>
+            <li class="item">
+              <a class="link" title="Tema Wordpress Ktquez" target="_blank" href="http://videophp.net/">
+                <b>wp-theme-ktquez</b>
+              </a>
+              <p class="description">
+                Tema Wordpress Ktquez
+              </p>
+            </li>
+            <li class="item">
+              <a class="link" title="Uma quase vídeo documentação em PT-BR da linguagem web mais usada no mundo (PHP)" target="_blank" href="https://github.com/ktquez/wp-theme-ktquez">
+                <b>videophp.net</b>
+              </a>
+              <p class="description">
+                Uma quase vídeo documentação em PT-BR da linguagem web mais usada no mundo (PHP)
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="fullX margin-section">
+          <h2 class="fullX title">WEBSITES E APLICAÇÕES</h2>  
+          <ul class="fullX txt list">
+            <li class="item">
+              <p class="description">
+                EM BREVE
+              </p>
+            </li>
+          </ul>        
+        </div>
       </div>
     </section>
   </div>
@@ -32,7 +78,16 @@
 </script>
 
 <style lang="postcss" scoped>
-  .content-page {
+  .list > .item{
+    padding: 20px 0;
+    width: 100%;
+  }
 
+  .list > .item:not(:last-child){
+    border-bottom: 1px solid #ddd;
+  }
+
+  .margin-section {
+    margin-bottom: 80px;
   }
 </style>
