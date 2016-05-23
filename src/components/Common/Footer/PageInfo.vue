@@ -25,9 +25,11 @@
   }
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
   .info {
     font-size: 12px;
+    margin-top: 24px;
+    margin-bottom: 10px;
 
     & > .heart {
       color: red;

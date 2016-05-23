@@ -20,7 +20,7 @@
   }
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
   .hamburger {
     width: 30px;
     height: 20px;

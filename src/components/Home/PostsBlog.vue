@@ -76,5 +76,13 @@
   }
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
+  .grid {
+    margin: 40px 8px 0 8px;
+    width: calc(100% - 16px);
+
+    & > .item {
+      margin-bottom: 20px;
+    }
+  }
 </style>

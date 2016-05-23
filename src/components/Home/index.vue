@@ -29,13 +29,4 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
-
-  .grid {
-    margin: 40px 8px 0 8px;
-    width: calc(100% - 16px);
-
-    & > .item {
-      margin-bottom: 20px;
-    }
-  }
 </style>

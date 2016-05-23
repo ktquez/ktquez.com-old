@@ -20,7 +20,7 @@
   }
 </script>
 
-<style>
+<style lang="postcss" scoped>
   
   :root {
     @custom-media --medium-viewport (max-width: 1024px);     

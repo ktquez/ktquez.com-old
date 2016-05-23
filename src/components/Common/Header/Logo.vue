@@ -10,7 +10,7 @@
   export default {}
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
   :root {
     --color: #666;   
 

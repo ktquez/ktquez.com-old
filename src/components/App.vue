@@ -76,8 +76,26 @@
     font-weight: bold; 
   }
 
+  .top-page {
+    padding-top: 20px;
+  }
+
   .content-page{
     margin-top: 50px;
+
+    & .title {
+      color: #444;
+      font-size: 22px;
+    }
+
+    & .txt {
+      margin-top: 20px;
+      line-height: 1.5em;
+      font-size: 17px;
+      letter-spacing: .5px;    
+      color: #777;
+      float: left;
+    }
   }
 
 </style>
