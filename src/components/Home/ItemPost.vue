@@ -1,11 +1,16 @@
 <template>
-  <a class="box-item-post fullX" href="#">
-    <img :src="post.img" alt="#" class="img-post">
-    <div class="info-item-post fade-half">
-      <h2 class="title-post fl title"> {{ post.title }} </h2>      
-    </div>
-  </a>    
-  <div class="effect-page-post"></div>
+  <article class="fullX article">
+    <a v-link="{ name: 'article', params: { slug: post.slug }}" title="{{ post.title }}">
+      <h2 class="fullX title">
+        {{ post.title }}      
+      </h2>      
+    </a>
+    <small class="fullX info-article">Postado em {{ post.date }} by <a class="link" href="https://twitter.com/ktquez" target="_blank">@ktquez</a></small>
+    <p class="fullX lspacing txt description">
+      {{ post.description }}
+    </p>
+    <a class="link see-more fade-half" v-link="{ name: 'article', params: { slug: post.slug }}" title="{{ post.title }}">LER MAIS</a>
+  </article>    
 </template>
 
 <script>
@@ -22,35 +27,43 @@
   }
 </script>
 
-<style lang="postcss">
-  .box-item-post {
-    background-color: #ccc;
-    margin: 0 10px;
-    width: calc(100% - 20px);
-    overflow: hidden;
-    color: #fff;
+<style lang="postcss" scoped>
 
-    & > .img-post {
-      width: 100%;
-      float: left;
-    } 
-
-    &:hover > .info-item-post {
-      bottom: 20px;      
-    }
+  :root {
+    --green: #4ac6b7;
   }
 
-  .info-item-post{
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    margin: 0 10px;
-    padding: 20px 10px;
-    background-color: color(black alpha(50%));
-    width: calc(100% - 40px);
+  .article {
+    margin: 50px 0;
+  }
 
-    & > .title-post {
-      text-transform: uppercase;
+  .title {
+    font-size: 32px;
+    color: #333;
+  }
+
+  .info-article {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999;
+  }
+
+  .description {
+    color: #999;
+    text-align: left;
+  }
+
+  .see-more {
+    border: 1px solid var(--green);
+    padding: 8px 12px 7px;
+    border-radius: 60px;
+    float:left;
+    margin-top: 20px;
+    font-size: 12px;
+
+    &:hover {
+      background-color: var(--green);
+      color: #fff;
     }
   }
 </style>

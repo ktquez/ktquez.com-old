@@ -2,7 +2,7 @@
     <main class="home fullX">
       <short-about class="box-center5"></short-about>
       <separate></separate>
-      <posts-blog></posts-blog>
+      <posts-blog :posts="posts"></posts-blog>
     </main>
 </template>
 
@@ -12,6 +12,21 @@
   import Separate from '../Common/Separate'
 
   export default {
+    data () {
+      return {
+        posts: []
+      }
+    },
+    route: {
+      data (transition) {
+        this.$http.get('static/articles/_data.json').then((response) => {
+          transition.next({
+            posts: response.data
+          })
+        })
+      },
+      waitForData: true
+    },
     components: {
       ShortAbout,
       PostsBlog,
