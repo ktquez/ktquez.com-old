@@ -53,6 +53,9 @@
 
   code {
     font-family: var(--font-code);
+    color: #666;
+    background: #fff;
+    border-radius: 5px;
   }
 
   .fade-transition {
