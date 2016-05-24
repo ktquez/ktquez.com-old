@@ -40,7 +40,6 @@
     --bg-body: #f2f2f2;
     --font: Raleway, Calibri, 'trebuchet MS';
     --font-title: 'Varela Round', Calibri, Arial;
-    --font-article: 'Lora', Calibri, Arial;
     --link: #4ac6b7;
   }
 
@@ -68,7 +67,7 @@
   }
 
   .article {
-    font-family: var(--font-article);
+    font-family: var(--font);
   }
 
   .title { 
@@ -96,15 +95,19 @@
       color: #444;
       font-size: 22px;
     }
+  }
 
-    & .txt {
-      margin-top: 20px;
-      line-height: 1.5em;
-      font-size: 17px;
-      letter-spacing: .5px;    
-      color: #777;
-      float: left;
-    }
+.content-page .txt, .article .txt {
+  margin-top: 20px;
+  line-height: 1.5em;
+  font-size: 17px;
+  letter-spacing: .5px;    
+  color: #777;
+  float: left;
+}
+
+  .margin-section {
+    margin-top: 50px;
   }
 
 </style>
