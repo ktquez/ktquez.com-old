@@ -1,9 +1,11 @@
 <template>
-    <main class="home fullX">
+    <div class="home fullX">
       <short-about class="box-center5"></short-about>
       <separate></separate>
-      <posts-blog :posts="posts"></posts-blog>
-    </main>
+      <section class="box-center5">
+        <posts-blog :posts="posts"></posts-blog>
+      </section>
+    </div>
 </template>
 
 <script>

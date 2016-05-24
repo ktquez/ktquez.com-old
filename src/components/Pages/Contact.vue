@@ -1,5 +1,5 @@
 <template>
-  <main class="fullX main">
+  <main class="fullX main" role="main">
     <div class="fullX bg-recife">
       <div class="info-bg abs centerX">
         <span class="icon">&#xe908;</span>

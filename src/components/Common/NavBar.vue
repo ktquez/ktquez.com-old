@@ -1,5 +1,5 @@
 <template>
-  <nav>    
+  <nav role="navigation">    
     <ul class="navbar list-navbar centerX fl">
       <li class="item">
         <a v-link="{ name: 'bio'}" class="link">SOBRE</a>

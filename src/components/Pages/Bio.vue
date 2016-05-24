@@ -1,5 +1,5 @@
 <template>
-  <main class="fullX">
+  <main class="fullX" role="main">
     <section class="fullX top-page">
       <top-page class="box-center5" :title="info.title" :description="info.description"></top-page>    
     </section>    

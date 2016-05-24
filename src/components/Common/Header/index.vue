@@ -1,5 +1,5 @@
 <template>
-  <header class="fullX header">  
+  <header class="fullX header" role="banner">  
     <div class="c-m12 c-t2 c-gg3 cpl">
       <logo></logo>      
     </div> 
