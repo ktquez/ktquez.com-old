@@ -19,8 +19,7 @@
 
 <style lang="postcss">
   .post {
-    color: #777;
-
+    
     & h1, 
     & h2, 
     & h3, 
