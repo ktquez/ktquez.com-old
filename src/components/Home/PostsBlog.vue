@@ -1,9 +1,7 @@
 <template>
-  <section class="box-center5">
-    <main class="fullX">
-      <item-post v-for="post in posts" :post="post"></item-post>                        
-    </main>    
-  </section>
+  <main class="fullX" role="main">
+    <item-post v-for="post in posts" :post="post"></item-post>                        
+  </main>    
 </template>
 
 <script>

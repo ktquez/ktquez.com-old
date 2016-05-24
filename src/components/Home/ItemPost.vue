@@ -1,11 +1,11 @@
 <template>
-  <article class="fullX article">
+  <article class="fullX article" role="article">
     <a v-link="{ name: 'article', params: { slug: post.slug }}" title="{{ post.title }}">
       <h2 class="fullX title">
         {{ post.title }}      
       </h2>      
     </a>
-    <small class="fullX info-article">Postado em {{ post.date }} by <a class="link" href="https://twitter.com/ktquez" target="_blank">@ktquez</a></small>
+    <small class="fullX info-article">Postado em <time datetime="{{ post.date }}">{{ post.date | invertDate }}</time> by <a class="link" href="https://twitter.com/ktquez" target="_blank">@ktquez</a></small>
     <p class="fullX lspacing txt description">
       {{ post.description }}
     </p>
@@ -22,6 +22,11 @@
       post: {
         type: Object,
         required: true
+      }
+    },
+    filters: {
+      invertDate (value) {
+        return value.split('-').reverse().join('-')
       }
     }
   }
