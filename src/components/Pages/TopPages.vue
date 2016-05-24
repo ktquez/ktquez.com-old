@@ -1,6 +1,6 @@
 <template>
   <div class="tac">
-    <div class="c-m12 cpl top-page">
+    <div class="fullX top-page">
       <strong class="fullX title">{{ title }}</strong>
       <div class="fullX">
         <p class="box-center7 description lspacing">
@@ -27,9 +27,6 @@
 
 <style lang="postcss">
   .top-page {
-    margin-bottom: 20px;
-    margin-top: 20px;
-
     & > .title {
       font-size: 25px;
       margin-bottom: 10px;

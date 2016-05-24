@@ -1,6 +1,6 @@
 <template>
   <div class="tac">
-    <div class="c-m12 cpl short-about">
+    <div class="fullX short-about top-page">
       <div class="fullX">
         <img src="../../assets/avatar.png" alt="Alan Albuquerque (ktquez)" class="img-circle -big">      
       </div>
@@ -22,9 +22,6 @@
 
 <style lang="postcss">
   .short-about {
-    margin-bottom: 20px;
-    margin-top: 20px;
-
     & > .nickname {
       margin-top: 5px;
       font-size: 12px;

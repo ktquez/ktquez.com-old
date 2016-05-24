@@ -82,6 +82,8 @@
   }
 
   .top-page {
+    margin-bottom: 20px;
+    margin-top: 20px;
     padding-top: 20px;
     & > .description {
       font-family: var(--font-article);
