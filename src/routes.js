@@ -3,6 +3,7 @@ import Bio from './components/Pages/Bio'
 import Projects from './components/Pages/Projects'
 import Lab from './components/Pages/Lab'
 import Contact from './components/Pages/Contact'
+import Article from './components/Article/index'
 
 export const routes = {
   '/': {
@@ -24,13 +25,9 @@ export const routes = {
   '/contact': {
     name: 'contact',
     component: Contact
+  },
+  '/blog/:slug': {
+    name: 'article',
+    component: Article
   }
-  /*
-    BLOG            (LISTAGEM DE ARTIGOS = HOME)
-    BLOG/:SLUG      (ARTIGO ESPECÍFICO)
-    LAB             (POSTERIORMENTE, EXPERIÊNCIAS COM DEMOS = CODROPS/CODEHOUSE E ETC)
-    LAB/:PROJECT
-    PROJECTS        (GITHUB/PORTIFOLIO)
-    PROJECTS/:SLUG
-   */
 }
