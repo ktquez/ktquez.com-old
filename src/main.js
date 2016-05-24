@@ -4,9 +4,11 @@ import VueResource from 'vue-resource'
 import App from './components/App'
 import { routes } from './routes'
 
-Vue.use(VueRouter)
+// Set default options in vue Resource
 Vue.use(VueResource)
+Vue.http.options.root = 'http://localhost:8080'
 
+Vue.use(VueRouter)
 const router = new VueRouter({
   history: true,
   saveScrollPosition: true,
@@ -14,5 +16,4 @@ const router = new VueRouter({
 })
 
 router.map(routes)
-
 router.start(App, 'app')
