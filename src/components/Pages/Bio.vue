@@ -6,7 +6,10 @@
     <separate></separate>
     <section class="box-center5">
       <div class="fullX content-page">
-        <img src="../../assets/about.png" class="fullX img-about" alt="Alan Albuquerque - ktquez">
+        <figure>
+          <img src="../../assets/about.png" class="fullX img-about" alt="Alan Albuquerque - ktquez">
+          <figcaption class="fullX caption tac">Eu, ela, uma filha e dois cachorros</figcaption>          
+        </figure>
         <div class="fullX content-bio">
           <h2 class="fullX title">OLÁ, EU SOU ALAN</h2>
           
@@ -151,4 +154,11 @@
   .content-page .title {
     margin-top: 40px;
   }
+
+  .caption {
+    color: #999;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
 </style>
