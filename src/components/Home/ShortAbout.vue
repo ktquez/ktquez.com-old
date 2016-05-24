@@ -2,7 +2,7 @@
   <div class="tac">
     <div class="c-m12 cpl short-about">
       <div class="fullX">
-        <img src="../../assets/me.png" alt="Alan Albuquerque (ktquez)" class="img-circle -big">      
+        <img src="../../assets/avatar.png" alt="Alan Albuquerque (ktquez)" class="img-circle -big">      
       </div>
       <strong class="fullX title nickname">[ ktquez ]</strong>      
       <strong class="fullX title name">ALAN ALBUQUERQUE</strong>
