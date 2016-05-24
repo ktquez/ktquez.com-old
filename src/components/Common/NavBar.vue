@@ -2,19 +2,19 @@
   <nav>    
     <ul class="navbar list-navbar centerX fl">
       <li class="item">
-        <a v-link="'about'" class="link">SOBRE</a>
+        <a v-link="{ name: 'bio'}" class="link">SOBRE</a>
       </li>
       <li class="item">
-        <a v-link="'projects'" class="link">PROJETOS</a>
+        <a v-link="{ name: 'projects'}" class="link">PROJETOS</a>
       </li>
       <li class="item">
-        <a v-link="'/'" class="link">BLOG</a>
+        <a v-link="{ name: 'home'}" class="link">BLOG</a>
       </li>
       <!-- <li class="item">
         <a v-link="'lab'" class="link">LAB</a>
       </li> -->
       <li class="item">
-        <a v-link="'contact'" class="link">CONTATO</a>
+        <a v-link="{ name: 'contact'}" class="link">CONTATO</a>
       </li>
     </ul>
   </nav>
