@@ -3,12 +3,7 @@
     &copy; {{ year }} - Build with 
     <span class="icon heart">&#xe905;</span>
     <a class="link fade-half" target="blank" href="https://vuejs.org/" title="Vue.js - Reactive Components for Modern Web Interfaces">
-      Vue.js
-    </a>, API RESTful by 
-    <a class="link fade-half" target="blank" href="http://jexia.com/" title="Jexia - Build RESTful APIs without writing a single line of code">
-      Jexia
-    </a>
-    and deployed on
+      Vue.js and deployed on
     <a class="link fade-half" target="blank" href="https://surge.sh/" title="Surge - Static web publishing for Front-End Developers">
       Surge
     </a>
