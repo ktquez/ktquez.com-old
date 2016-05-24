@@ -5,7 +5,7 @@
         {{ post.title }}      
       </h2>      
     </a>
-    <small class="fullX info-article title">Postado em <time datetime="{{ post.date }}">{{ post.date | invertDate '/' }}</time> by <a class="link" href="https://twitter.com/ktquez" target="_blank">@ktquez</a></small>
+    <small class="fullX info-article title">Postado em <time datetime="{{ post.date }}">{{ post.date | reverseDate '/' }}</time> by <a class="link" href="https://twitter.com/ktquez" target="_blank">@ktquez</a></small>
     <p class="fullX lspacing txt description">
       {{ post.description }}
     </p>
@@ -25,7 +25,7 @@
       }
     },
     filters: {
-      invertDate (value, separate) {
+      reverseDate (value, separate) {
         return value.split('-').reverse().join(separate)
       }
     }
