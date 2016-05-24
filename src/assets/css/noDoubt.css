@@ -4,15 +4,14 @@
 -------------------------------------------------------------- */
 *{
   margin:0;padding:0px;
-  font-size: 100%;
   font-family: inherit;
   vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;  
+  -moz-osx-font-smoothing: grayscale;  
 }
 
-ol, 
-ul { 
+ol.-none, 
+ul.-none { 
   list-style: none; 
 }
 
