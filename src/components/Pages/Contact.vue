@@ -1,18 +1,20 @@
 <template>
-  <div class="fullX bg-recife">
-    <div class="info-bg abs centerX">
-      <span class="icon">&#xe908;</span>
-      <span class="txt title">RECIFE</span>
+  <main class="fullX main">
+    <div class="fullX bg-recife">
+      <div class="info-bg abs centerX">
+        <span class="icon">&#xe908;</span>
+        <span class="txt title">RECIFE</span>
+      </div>
     </div>
-  </div>
-  <div class="box-center5">
-    <div class="fullX content-page">
-      <h2 class="fullX title tac">CONTATO</h2>          
-      <p class="txt tac">
-      Caso queira entrar em contato para batermos um papo, tirar alguma dúvida ou disposição para me contratar. Me siga no <b>Twitter:</b> <a class="link" href="https://twitter.com/ktquez" target="_blank">@ktquez</a>, no <b>Github:</b> <a class="link" href="https://github.com/ktquez" target="_blank">@ktquez</a> ou me envie um email através do <a class="link" href="mailto:ktquez@gmail.com">ktquez@gmail.com</a>
-      </p>
-    </div>
-  </div>
+    <div class="box-center5">
+      <div class="fullX content-page">
+        <h2 class="fullX title tac">CONTATO</h2>          
+        <p class="txt tac">
+        Caso queira entrar em contato para batermos um papo, tirar alguma dúvida ou disposição para me contratar. Me siga no <b>Twitter:</b> <a class="link" href="https://twitter.com/ktquez" target="_blank">@ktquez</a>, no <b>Github:</b> <a class="link" href="https://github.com/ktquez" target="_blank">@ktquez</a> ou me envie um email através do <a class="link" href="mailto:ktquez@gmail.com">ktquez@gmail.com</a>
+        </p>
+      </div>
+    </div>    
+  </main>
 </template>
 
 <script>

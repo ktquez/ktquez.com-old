@@ -1,9 +1,9 @@
 <template>
-    <div class="home fullX">
+    <main class="home fullX">
       <short-about class="box-center5"></short-about>
       <separate></separate>
       <posts-blog></posts-blog>
-    </div>
+    </main>
 </template>
 
 <script>
