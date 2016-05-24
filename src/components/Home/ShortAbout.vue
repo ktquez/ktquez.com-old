@@ -31,7 +31,7 @@
     }
 
     & > .name {
-      font-size: 25px;
+      font-size: 30px;
     }
 
     & > .about-me {
