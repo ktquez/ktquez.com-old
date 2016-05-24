@@ -39,6 +39,7 @@
   :root {
     --bg-body: #f2f2f2;
     --font: Raleway, Calibri, 'trebuchet MS';
+    --font-code: Cousine, Arial, 'trebuchet MS';
     --font-title: 'Varela Round', Calibri, Arial;
     --link: #4ac6b7;
   }
@@ -48,6 +49,10 @@
     background-color: var(--bg-body);
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  code {
+    font-family: var(--font-code);
   }
 
   .fade-transition {
@@ -99,7 +104,8 @@
     }
   }
 
-  .content-page .txt, .article .txt {
+  .content-page .txt, 
+  .article .txt {
     margin-top: 20px;
     line-height: 1.5em;
     font-size: 17px;
