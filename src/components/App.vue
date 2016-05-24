@@ -97,14 +97,14 @@
     }
   }
 
-.content-page .txt, .article .txt {
-  margin-top: 20px;
-  line-height: 1.5em;
-  font-size: 17px;
-  letter-spacing: .5px;    
-  color: #777;
-  float: left;
-}
+  .content-page .txt, .article .txt {
+    margin-top: 20px;
+    line-height: 1.5em;
+    font-size: 17px;
+    letter-spacing: .5px;    
+    color: #777;
+    float: left;
+  }
 
   .margin-section {
     margin-top: 50px;
