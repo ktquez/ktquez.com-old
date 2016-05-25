@@ -7,9 +7,15 @@ import Article from './components/Article/index'
 import NotFound from './components/Pages/NotFound'
 
 export const routes = {
-  '/': {
-    name: 'home',
-    component: Home
+  '/blog': {
+    name: 'blog',
+    component: Home,
+    subRoutes: {
+      '/:slug': {
+        name: 'article',
+        component: Article
+      }
+    }
   },
   '/about': {
     name: 'bio',
@@ -26,10 +32,6 @@ export const routes = {
   '/contact': {
     name: 'contact',
     component: Contact
-  },
-  '/blog/:slug': {
-    name: 'article',
-    component: Article
   },
   '*': {
     name: '404',

@@ -8,7 +8,7 @@
         <a v-link="{ name: 'projects'}" class="link">PROJETOS</a>
       </li>
       <li class="item">
-        <a v-link="{ name: 'home'}" class="link">BLOG</a>
+        <a v-link="{ name: 'blog'}" class="link">BLOG</a>
       </li>
       <!-- <li class="item">
         <a v-link="'lab'" class="link">LAB</a>

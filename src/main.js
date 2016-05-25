@@ -24,6 +24,11 @@ router.beforeEach(() => {
   window.scrollTo(0, 0)
 })
 
+// redirect
+router.redirect({
+  '/': '/blog'
+})
+
 // Sync Vue-router with Store Vuex
 sync(store, router)
 
