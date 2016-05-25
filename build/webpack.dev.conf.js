@@ -1,9 +1,11 @@
 var config = require('../config')
+var path = require('path')
 var webpack = require('webpack')
 var merge = require('webpack-merge')
 var utils = require('./utils')
 var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -17,6 +19,12 @@ module.exports = merge(baseWebpackConfig, {
   // eval-source-map is faster for development
   devtool: '#eval-source-map',
   plugins: [
+    new CopyWebpackPlugin([
+      { 
+        from: path.resolve(__dirname, '../src/articles'),
+        to: 'static/articles'
+      }
+    ], {}),
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
