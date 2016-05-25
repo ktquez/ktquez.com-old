@@ -4,6 +4,7 @@ import Projects from './components/Pages/Projects'
 import Lab from './components/Pages/Lab'
 import Contact from './components/Pages/Contact'
 import Article from './components/Article/index'
+import NotFound from './components/Pages/NotFound'
 
 export const routes = {
   '/': {
@@ -29,5 +30,9 @@ export const routes = {
   '/blog/:slug': {
     name: 'article',
     component: Article
+  },
+  '*': {
+    name: '404',
+    component: NotFound
   }
 }
