@@ -33,6 +33,8 @@
           transition.next({
             post: response.data
           })
+        }).catch((response) => {
+          transition.redirect('/404')
         })
       }
     }
