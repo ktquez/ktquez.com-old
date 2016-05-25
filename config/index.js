@@ -3,6 +3,7 @@ var path = require('path')
 
 module.exports = {
   build: {
+    url: 'http://ktquez.com',
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
@@ -11,6 +12,7 @@ module.exports = {
     productionSourceMap: true
   },
   dev: {
+    url: 'http://localhost',
     env: require('./dev.env'),
     port: 8080,
     proxyTable: {}
