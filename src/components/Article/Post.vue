@@ -56,6 +56,7 @@
         float:left;
         font-size: 14px;
         overflow-y: auto;
+        line-height: 22px;
       }
     }      
 
