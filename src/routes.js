@@ -1,4 +1,4 @@
-import Home from './components/Home/index'
+import Blog from './components/Blog/index'
 import Bio from './components/Pages/Bio'
 import Projects from './components/Pages/Projects'
 import Lab from './components/Pages/Lab'
@@ -9,7 +9,7 @@ import NotFound from './components/Pages/NotFound'
 export const routes = {
   '/blog': {
     name: 'blog',
-    component: Home,
+    component: Blog,
     subRoutes: {
       '/:slug': {
         name: 'article',

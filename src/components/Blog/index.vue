@@ -3,7 +3,7 @@
       <short-about class="box-center5"></short-about>
       <separate></separate>
       <section class="box-center5">
-        <posts-blog :posts="posts"></posts-blog>
+        <posts-blog :posts="getPosts"></posts-blog>
       </section>
     </div>
 </template>
@@ -12,19 +12,23 @@
   import ShortAbout from './ShortAbout'
   import PostsBlog from './PostsBlog'
   import Separate from '../Common/Separate'
+  import { getPosts } from '../../vuex/getters'
+  import { setPosts } from '../../vuex/actions'
 
   export default {
-    data () {
-      return {
-        posts: []
+    vuex: {
+      getters: {
+        getPosts
+      },
+      actions: {
+        setPosts
       }
     },
     route: {
       data (transition) {
         this.$http.get('static/articles/_data.json').then((response) => {
-          transition.next({
-            posts: response.data
-          })
+          this.setPosts(response.data)
+          transition.next()
         })
       },
       waitForData: true
