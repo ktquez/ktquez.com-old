@@ -54,7 +54,7 @@
   code {
     font-family: var(--font-code);
     color: #777;
-    background: #e1e1e1;
+    background: #fdfdfd;
     border-radius: 4px;
   }
 
