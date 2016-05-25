@@ -25,7 +25,7 @@
   }
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
   .top-page {
     & > .title {
       font-size: 25px;
