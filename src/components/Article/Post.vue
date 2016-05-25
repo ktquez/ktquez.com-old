@@ -30,6 +30,10 @@
       font-weight: bold;
     }
 
+    & hr {
+      border: 1px solid #dedede;
+    }
+
     & p {
       margin: 20px 0 10px;
       line-height: 1.5em;
