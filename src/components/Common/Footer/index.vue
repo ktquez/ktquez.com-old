@@ -29,24 +29,20 @@
     padding-bottom: 20px;
     padding-top: 10px;
 
-    & > .center {
-      border-top: 1px solid #e8e8e8;
-    }
+    & > .center { border-top: 1px solid #e8e8e8; }
 
   }
 
-  .navbar-footer {
-    margin-top: 22px;
-  }
+  .navbar-footer { margin-top: 22px; }
 
    @media (--small-viewport) {
     .navbar-footer .item {
-      float: left;
-      width: 100%;
-      text-align:center;
-      padding: 20px 0;
       background: #efefef;
+      float: left;
       margin-bottom: 2px;
+      padding: 20px 0;
+      text-align:center;
+      width: 100%;
 
       &:hover {
         color: #4ac6b7;
