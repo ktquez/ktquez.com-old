@@ -11,17 +11,29 @@
       }
     },
     ready () {
+      if (window.DISQUS) {
+        const vm = this
+        window.DISQUS.reset({
+          reload: true,
+          config () {
+            this.page.identifier = vm.$parent.$route.path
+            this.page.url = vm.$http.options.root + vm.$parent.$route.path
+          }
+        })
+        return
+      }
       const disqusShortname = this.shortname
+      const body = document.getElementsByTagName('body')[0]
       setTimeout(() => {
         (() => {
           let dsq = document.createElement('script')
           dsq.type = 'text/javascript'
           dsq.async = true
-          dsq.setAttribute('id', 'embed-js-disqus')
+          dsq.setAttribute('id', 'embed-disqus')
           dsq.src = 'http://' + disqusShortname + '.disqus.com/embed.js'
-          document.getElementsByTagName('body')[0].appendChild(dsq)
+          body.appendChild(dsq)
         })()
-      }, 1000)
+      }, 100)
     }
   }
 </script>
