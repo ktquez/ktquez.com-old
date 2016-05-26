@@ -9,13 +9,11 @@ import NotFound from './components/Pages/NotFound'
 export const routes = {
   '/blog': {
     name: 'blog',
-    component: Blog,
-    subRoutes: {
-      '/:slug': {
-        name: 'article',
-        component: Article
-      }
-    }
+    component: Blog
+  },
+  '/blog/:slug': {
+    name: 'article',
+    component: Article
   },
   '/about': {
     name: 'bio',

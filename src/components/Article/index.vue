@@ -2,9 +2,9 @@
   <main class="box-center5" role="main">  
     <section class="fullX">   
       <article role="article">
-        <h1 class="title -post fullX tac top-page margin-section">Build components with Vue.js and Webpack</h1>
+        <h1 class="title -post fullX tac top-page margin-section">{{ post.info.title }}</h1>
         <separate></separate>     
-        <post class="post fullX" :post="post"></post>
+        <post class="post fullX" :post="post.body"></post>
         <aside role="complementary" class="fullX info-post">
           <div class="c-m12 c-t8 cpl">
             <div class="fl author">
@@ -12,7 +12,7 @@
             </div>
           </div>
           <div class="c-m12 c-t4 cpl">
-            <tags v-for="tag in tags" :item="tag"></tags>            
+            <tags v-for="tag in getTags(post.info.tags)" :item="tag"></tags>            
           </div>
         </aside>
         <section class="comments">
@@ -29,12 +29,16 @@
   import Tags from '../Common/Tags'
   import Author from './Author'
   import Disqus from './Disqus'
+  import { getPosts } from '../../vuex/getters'
+  import { setPosts } from '../../vuex/actions'
   export default {
     data () {
       return {
-        post: '',
-        shotname_disqus: 'ktquez',
-        tags: ['php', 'vue', 'laravel', 'html', 'css3']
+        post: {
+          info: {},
+          body: ''
+        },
+        shotname_disqus: 'ktquez'
       }
     },
     components: {
@@ -44,17 +48,49 @@
       Author,
       Disqus
     },
+    methods: {
+      getTags (tags) {
+        return (tags) ? tags.split(' ') : ''
+      }
+    },
+    vuex: {
+      getters: {
+        getPosts
+      },
+      actions: {
+        setPosts
+      }
+    },
     route: {
+      activate (transition) {
+        let slug = transition.to.params.slug
+        const setCurrent = (posts) => {
+          let current = posts.filter((item) => {
+            return item.slug === slug
+          })
+          this.$set('post.info', current[0])
+        }
+        if (this.getPosts.length) {
+          setCurrent(this.getPosts)
+          transition.next()
+          return
+        }
+        this.$http.get('static/articles/_data.json').then((response) => {
+          this.setPosts(response.data)
+          setCurrent(this.getPosts)
+          transition.next()
+        })
+      },
       data (transition) {
         let slug = transition.to.params.slug
         this.$http.get('static/articles/' + slug + '.md').then((response) => {
-          transition.next({
-            post: response.data
-          })
+          this.$set('post.body', response.data)
+          transition.next()
         }).catch((response) => {
           transition.redirect('/404')
         })
-      }
+      },
+      waitForData: true
     }
   }
 </script>

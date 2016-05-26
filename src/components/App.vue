@@ -19,6 +19,7 @@
   import Overlay from './Common/Overlay'
   import Foo from './Common/Footer/index'
   import ScrollTop from './Common/ScrollTop'
+  import store from '../vuex/store'
 
   export default {
     components: {
@@ -28,7 +29,8 @@
       Foo,
       ScrollTop,
       Overlay
-    }
+    },
+    store
   }
 </script>
 

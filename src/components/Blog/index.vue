@@ -1,11 +1,11 @@
 <template>
-    <div class="home fullX">
-      <short-about class="box-center5"></short-about>
-      <separate></separate>
-      <section class="box-center5">
-        <posts-blog :posts="getPosts"></posts-blog>
-      </section>
-    </div>
+  <div class="home fullX">
+    <short-about class="box-center5"></short-about>
+    <separate></separate>
+    <section class="box-center5">
+      <posts-blog :posts="getPosts"></posts-blog>
+    </section>
+  </div>   
 </template>
 
 <script>
@@ -26,6 +26,10 @@
     },
     route: {
       data (transition) {
+        if (this.getPosts.length) {
+          transition.next()
+          return
+        }
         this.$http.get('static/articles/_data.json').then((response) => {
           this.setPosts(response.data)
           transition.next()
