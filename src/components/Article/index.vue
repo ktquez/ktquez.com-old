@@ -50,7 +50,7 @@
     },
     methods: {
       getTags (tags) {
-        return (tags) ? tags.split(' ') : ''
+        return (tags) ? tags.split(' ') : []
       }
     },
     vuex: {
