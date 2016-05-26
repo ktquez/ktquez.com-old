@@ -1,7 +1,5 @@
 <template>
-  <button class="back-scrolltop" @click="fire">
-    <span class="icon arrow-top">&#xe907;</span>
-  </button>
+  <span class="back-scrolltop icon" @click="fire">&#xe907;</span>
 </template>
 
 <script>
@@ -19,7 +17,7 @@
     },
     methods: {
       fire (e) {
-        let el = e.target.offsetParent || e.target
+        let el = e.target
         if (el.classList) {
           el.classList.add('-fire')
         }
@@ -48,25 +46,20 @@
   }
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
   .back-scrolltop {
-    right: 50px;
-    bottom: 100px;
-    position: fixed;
-    z-index: 9;
-    display: none;
-
-    
     border-radius: 50%;
     background: color(white alpha(50%));
-    box-shadow: 0 10px 5px -5px #ccc;
-    
+    box-shadow: 10px 0 5px -5px #ccc;
+    bottom: 100px;
+    cursor: pointer;
+    color: #4ac6b7;    
+    display: none;
+    position: fixed;
     padding: 10px;
-
-    & > .arrow-top {
-      transform: rotate(90deg);
-      color: #4ac6b7;
-    }
+    right: 50px;
+    transform: rotate(90deg);
+    z-index: 9;
     
     &.-fire {
       animation: fire 1s linear infinite;
@@ -75,14 +68,13 @@
     &.-show {
       display: block;
     }
-
   }
 
   @keyframes fire {
-    from { box-shadow: 0 20px 5px -10px #4ac6b7; }
-    40% { box-shadow: 0 15px 5px -10px color(#4ac6b7 blackness(30%)); }
-    60% { box-shadow: 0 20px 5px -10px #4ac6b7; }
-    80% { box-shadow: 0 15px 5px -10px color(#4ac6b7 blackness(30%)); }
-    to { box-shadow: 0 20px 5px -10px #4ac6b7; }
+    from { box-shadow: 20px 0 5px -10px #4ac6b7; }
+    40% { box-shadow: 15px 0 5px -10px color(#4ac6b7 blackness(30%)); }
+    60% { box-shadow: 20px 0 5px -10px #4ac6b7; }
+    80% { box-shadow: 15px 0 5px -10px color(#4ac6b7 blackness(30%)); }
+    to { box-shadow: 20px 0 5px -10px #4ac6b7; }
   }
 </style>
