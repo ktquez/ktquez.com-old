@@ -12,7 +12,7 @@
             </div>
           </div>
           <div class="c-m12 c-t4 cpl">
-            <tags v-for="tag in getTags(post.info.tags)" :item="tag"></tags>            
+            <tag v-for="tag in getTags(post.info.tags)" :item="tag"></tag>
           </div>
         </aside>
         <section class="comments">
@@ -26,7 +26,7 @@
 <script>
   import Separate from '../Common/Separate'
   import Post from './Post'
-  import Tags from '../Common/Tags'
+  import Tag from '../Common/Tags'
   import Author from './Author'
   import Disqus from './Disqus'
   import { getPosts } from '../../vuex/getters'
@@ -44,7 +44,7 @@
     components: {
       Separate,
       Post,
-      Tags,
+      Tag,
       Author,
       Disqus
     },

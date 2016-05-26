@@ -34,7 +34,7 @@
           </p>            
 
           <h2 class="fullX title">NO QUE ESTOU FOCADO</h2>
-          <ul class="fullX txt">
+          <ul class="fullX txt list-focused">
             <li>
               Trabalho Remoto
             </li>
@@ -60,61 +60,12 @@
 
           <h2 class="fullX title">MINHAS HABILIDADES SÃO</h2>
           <ul class="fullX txt">
-            <li>
-              <a href="">PHP</a>
-            </li>
-            <li>
-              <a href="">Laravel / Lumen</a>
-            </li>            
-            <li>
-              <a href="">API RESTful</a>
-            </li>
-            <li>
-              <a href="">Javascript Vanilla</a>
-            </li>
-            <li>
-              <a href="">Vue.js</a>
-            </li>
-            <li>
-              <a href="">Webpack e Gulp</a>
-            </li>
-            <li>
-              <a href="">PostCSS / NextCSS</a>
-            </li>  
-            <li>
-              <a href="">GIT</a>
-            </li>
-            <li>
-              <a href="">Web performance</a>
-            </li> 
+            <tag v-for="skill in skills" :item="skill"></tag> 
           </ul>
 
           <h2 class="fullX title">CONHECIMENTO BÁSICO EM</h2>
           <ul class="fullX txt">
-            <li>
-              <a href="">ElasticSearch</a>
-            </li>
-            <li>
-              <a href="">Docker</a>
-            </li>
-            <li>
-              <a href="">NGINX</a>
-            </li>
-            <li>
-              <a href="">MongoDB / moongose</a>
-            </li>  
-            <li>
-              <a href="">Express / Node.js</a>
-            </li>           
-            <li>
-              <a href="">React</a>
-            </li>
-            <li>
-              <a href="">SEO</a>
-            </li>
-            <li>
-              <a href="">UX / UI</a>
-            </li> 
+            <tag v-for="skill in moreSkills" :item="skill"></tag>
           </ul>
           
 
@@ -133,18 +84,43 @@
 <script>
   import TopPage from './TopPages'
   import Separate from '../Common/Separate'
+  import Tag from '../Common/Tags'
   export default {
     data () {
       return {
         info: {
           title: 'BIO',
           description: 'Seja bem vindo! Saiba um pouco mais sobre'
-        }
+        },
+        skills: [
+          'PHP',
+          'Laravel / Lumen',
+          'Redis',
+          'API RESTful',
+          'Javascript Vanilla',
+          'Vue.js',
+          'Webpack e Gulp',
+          'PostCSS / NextCSS',
+          'GIT',
+          'Web performance',
+          'Clean code'
+        ],
+        moreSkills: [
+          'ElasticSearch',
+          'Docker',
+          'NGINX',
+          'SVG',
+          'AngularJS',
+          'React',
+          'SEO',
+          'UX / UI'
+        ]
       }
     },
     components: {
       TopPage,
-      Separate
+      Separate,
+      Tag
     }
   }
 </script>
@@ -159,6 +135,10 @@
     color: #999;
     font-size: 12px;
     margin-top: 10px;
+  }
+
+  .list-focused {
+    margin-left: 20px;
   }
 
 </style>
