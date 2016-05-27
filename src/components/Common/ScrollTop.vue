@@ -7,13 +7,15 @@
     ready () {
       // Display arrow back to top
       const el = document.querySelector('.back-scrolltop')
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 400) {
-          el.classList.add('-show')
-          return
-        }
-        el.classList.remove('-show')
-      }, false)
+      if (el.classList !== undefined) {
+        window.addEventListener('scroll', () => {
+          if (window.pageYOffset > 400) {
+            el.classList.add('-show')
+            return
+          }
+          el.classList.remove('-show')
+        }, false)
+      }
     },
     methods: {
       fire (e) {
