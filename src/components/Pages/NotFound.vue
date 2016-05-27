@@ -1,5 +1,16 @@
 <template>
-  <h1>404</h1>  
+   <div class="box-center5">
+    <section class="notFound fullX tac">
+      <div class="centerY fullX">
+        <h2 class="title">404</h2>
+        <span class="fullX">
+          <b>:</b> (
+          <br><br>
+          DESCULPE, MAS ESSA PÁGINA NÃO EXISTE</span>
+        <a class="link fullX" v-link="{name: 'blog'}">CLICK AQUI PARA ACESSAR O BLOG</a>        
+      </div>
+    </section>
+  </div>  
 </template>
 
 <script>
@@ -7,4 +18,16 @@
 </script>
 
 <style lang="postcss" scoped>
+  .notFound {
+    height: 75vh;
+    
+    & .title {
+      font-size: 120px;
+      color: #333;
+    }
+
+    & .link {
+      margin-top: 10px;
+    }
+  }
 </style>
