@@ -1,7 +1,9 @@
 <template>
   <header class="fullX header" role="banner">  
     <div class="c-m12 c-t2 c-gg3 cpl">
-      <logo></logo>      
+      <a v-link="{name: 'blog'}" class="logo" >
+        <logo></logo>      
+      </a>
     </div> 
     <div class="c-t10 c-gg6 cpl dnone-m view-t">
       <menu :class="['navbar-header']"></menu>
