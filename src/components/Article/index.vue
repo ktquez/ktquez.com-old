@@ -8,7 +8,18 @@
         <aside role="complementary" class="fullX info-post">
           <div class="c-m12 c-t8 cpl">
             <div class="fl author">
-              <author></author>              
+              <div class="c-m12 c-t3 c-g2 cpl box-avatar">
+                <img src="../../assets/avatar.png" alt="Alan Albuquerque (ktquez)" class="avatar img-circle -medium">      
+              </div>
+              <div class="c-m12 c-t9 c-g10 cpl box-info-author">
+                <strong class="title name fl">ALAN ALBUQUERQUE -</strong>
+                <strong class="title nickname fl">KTQUEZ</strong>      
+                <div class="fullX about-me">
+                  <p class="lspacing description">
+                    Freelancer web developer PHP e Javascript, autodidata, tentando escrever coisas relevantes e criando screencasts interessantes
+                  </p>              
+                </div>    
+              </div>            
             </div>
           </div>
           <div class="c-m12 c-t4 cpl">
@@ -27,7 +38,6 @@
   import Separate from '../Common/Separate'
   import Post from './Post'
   import Tag from '../Common/Tags'
-  import Author from './Author'
   import Disqus from './Disqus'
   import { getPosts } from '../../vuex/getters'
   import { setPosts } from '../../vuex/actions'
@@ -45,7 +55,6 @@
       Separate,
       Post,
       Tag,
-      Author,
       Disqus
     },
     methods: {
@@ -112,10 +121,27 @@
   .author {
     margin-right: 20px;
     width: calc(100% - 20px);
-    border-right: 1px solid var(--border-color);    
+    border-right: 1px solid var(--border-color);  
+
+    & .nickname {
+      margin-left: 6px;
+      font-size: 10px;
+      margin-top: 5px;
+    }
+
+    & .description {
+      padding-right: 4px;
+      width:calc(100% - 4px);
+      font-size: 12px;
+    }  
   }
   
   @media (--small-viewport) {
+    .box-avatar, 
+    .box-info-author { 
+      margin-bottom: 10px;
+      text-align: center; 
+    }
     .author {
       margin-bottom: 30px;
       margin-right: 0;
@@ -123,6 +149,11 @@
       width: 100%;      
       border-right: none;
       border-bottom: 1px solid var(--border-color);      
+
+      & .nickname,
+      & .title {
+        float: none;
+      }
     }
   }
   
