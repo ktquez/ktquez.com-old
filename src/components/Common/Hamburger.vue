@@ -1,20 +1,19 @@
 <template>
-    <div class="hamburger" @click="active" :class="{'-active': isActive}" role="button">
+    <div class="hamburger abs" @click="setStateNavMobile" :class="{'-active': getStateNavMobile, 'fixed': getStateNavMobile}" role="button">
       <span class="inner"></span>
     </div>    
 </template>
 
 <script>
-  // utilizar o vuex para avisar do click no hamburguer
+  import { setStateNavMobile } from '../../vuex/actions'
+  import { getStateNavMobile } from '../../vuex/getters'
   export default {
-    data () {
-      return {
-        isActive: false
-      }
-    },
-    methods: {
-      active () {
-        this.isActive = !this.isActive
+    vuex: {
+      getters: {
+        getStateNavMobile
+      },
+      actions: {
+        setStateNavMobile
       }
     }
   }
@@ -24,11 +23,11 @@
   .hamburger {
     width: 30px;
     height: 20px;
-    margin-top: 26px;
-    margin-left: 25px;
+    z-index: 10;
     cursor: pointer;
-    position: relative;
     float: left;
+    top: 25px;
+    left: 20px;
   
     &.-active > .inner {
       transform: rotate(45deg);

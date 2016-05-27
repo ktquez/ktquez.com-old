@@ -154,6 +154,11 @@ input[type="password"] {
   position: absolute;
 }
 
+.fixed {
+  min-height: 1px;
+  position: fixed;
+}
+
 .dnone-m {
   display: none;
 }

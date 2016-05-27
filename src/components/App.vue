@@ -1,34 +1,34 @@
 <template>    
+  <div>
     <div class="fullX">      
       <top></top>
-      <menu-mobile></menu-mobile>
       <social></social>
-      <router-view
-        transition="fade"
-        transition-mode="out-in"></router-view>
+      <router-view transition="fade" transition-mode="out-in"></router-view>
       <foo></foo>
     </div>
     <scroll-top></scroll-top>
-    <overlay zindex="9" position="absolute"></overlay>
+    <hamburger></hamburger>
+    <menu-mobile></menu-mobile>   
+  </div>
 </template>
 
 <script>
   import Top from './Common/Header/index'
-  import MenuMobile from './Common/NavMobile'
   import Social from './Common/Social'
-  import Overlay from './Common/Overlay'
+  import MenuMobile from './Common/NavMobile'
   import Foo from './Common/Footer/index'
+  import Hamburger from './Common/Hamburger'
   import ScrollTop from './Common/ScrollTop'
   import store from '../vuex/store'
 
   export default {
     components: {
       Top,
-      MenuMobile,
+      Hamburger,
       Social,
       Foo,
       ScrollTop,
-      Overlay
+      MenuMobile
     },
     store
   }
