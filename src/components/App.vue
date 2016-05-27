@@ -3,7 +3,8 @@
     <div class="fullX">      
       <top></top>
       <social></social>
-      <router-view transition="fade" transition-mode="out-in"></router-view>
+      <router-view transition="load" transition-mode="out-in"></router-view>
+      <div class="loading"></div>
       <foo></foo>
     </div>
     <scroll-top></scroll-top>
@@ -60,12 +61,46 @@
     border-radius: 4px;
   }
 
-  .fade-transition {
-    transition: opacity .5s ease;
+  .load-transition {
+    transition: opacity .5s;    
+    opacity: 1;
   }
 
-  .fade-enter, .fade-leave {
+  .load-transition.load-leave {
+    transition-delay: .2s;
+  }
+
+  .loading {
     opacity: 0;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    background: #eaeaea;
+    height: 10px;
+    width: 100%;
+    z-index: 12;
+  }
+
+  .load-leave + .loading {
+    width: 100%;
+    animation: loading .8s linear;
+  }
+
+  @keyframes loading {
+    50% { 
+      top: 70px;
+      height: 100%;
+      opacity: 1;      
+    }
+    to {
+      height: 10px;
+      top: 100%;      
+    }
+  }
+
+  .load-enter, .load-leave {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .link {
