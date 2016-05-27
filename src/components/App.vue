@@ -42,7 +42,6 @@
   :root {
     --bg-body: #f2f2f2;
     --font: Raleway, Calibri, 'trebuchet MS';
-    --font-code: Cousine, Arial, 'trebuchet MS';
     --font-title: 'Varela Round', Calibri, Arial;
     --link: #4ac6b7;
   }
@@ -55,7 +54,6 @@
   }
 
   code {
-    font-family: var(--font-code);
     color: #777;
     background: #fdfdfd;
     border-radius: 4px;
