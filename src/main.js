@@ -10,7 +10,7 @@ import config from '../config/index'
 // Set default options in vue Resource
 Vue.use(VueResource)
 Vue.http.options.root = process.env.NODE_ENV === 'development'
-  ? config.dev.url + ':' + config.dev.port
+  ? config.dev.url
   : config.build.url
 
 Vue.use(VueRouter)
