@@ -11,7 +11,11 @@ export const routes = {
     name: 'blog',
     component: Blog
   },
-  '/blog/:slug': {
+  '/blog/:page': {
+    name: 'paginate',
+    component: Blog
+  },
+  '/:slug': {
     name: 'article',
     component: Article
   },

@@ -1,6 +1,6 @@
 <template>
   <footer class="footer fullX" role="contentinfo">
-    <div class="box-center6 center">
+    <div class="box-center5 center">
       <menu :class="['navbar-footer']"></menu>         
       <page-info :class="['info']"></page-info>               
     </div>
