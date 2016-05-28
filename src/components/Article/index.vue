@@ -2,10 +2,13 @@
   <main class="box-center5" role="main">  
     <section class="fullX">   
       <article role="article">
-        <h1 class="title -post fullX tac top-page margin-section">{{ post.info.title }}</h1>
+        <h1 class="title -post fullX tac top-page margin-section">{{ currentPost.title }}</h1>
         <separate></separate>     
         <post class="post fullX" :post="post.body"></post>
         <aside role="complementary" class="fullX info-post">
+          <div class="c-m12 cpl box-share">
+            <share></share>
+          </div>
           <div class="c-m12 c-t8 cpl">
             <div class="fl author">
               <div class="c-m12 c-t3 c-g2 cpl box-avatar">
@@ -23,10 +26,10 @@
             </div>
           </div>
           <div class="c-m12 c-t4 cpl">
-            <tag v-for="tag in getTags(post.info.tags)" :item="tag"></tag>
+            <tag v-for="tag in getTags(currentPost.tags)" :item="tag"></tag>
           </div>
         </aside>
-        <section class="comments">
+        <section class="comments fullX">
           <disqus :shortname="shotname_disqus"></disqus>
         </section>
       </article>
@@ -36,11 +39,18 @@
 
 <script>
   import Separate from '../Common/Separate'
+  import Share from './Share'
   import Post from './Post'
   import Tag from '../Common/Tags'
   import Disqus from './Disqus'
-  import { getPosts } from '../../vuex/getters'
-  import { setPosts } from '../../vuex/actions'
+  import {
+    getPosts,
+    getCurrentPost
+  } from '../../vuex/getters'
+  import {
+    setPosts,
+    setCurrentPost
+  } from '../../vuex/actions'
   export default {
     data () {
       return {
@@ -54,6 +64,7 @@
     components: {
       Separate,
       Post,
+      Share,
       Tag,
       Disqus
     },
@@ -64,36 +75,42 @@
     },
     vuex: {
       getters: {
-        getPosts
+        getPosts,
+        currentPost: getCurrentPost
       },
       actions: {
-        setPosts
+        setPosts,
+        setCurrentPost
       }
     },
     route: {
       activate (transition) {
+        let vm = this
         let slug = transition.to.params.slug
         const setCurrent = (posts) => {
           let current = posts.filter((item) => {
             return item.slug === slug
           })
-          this.$set('post.info', current[0])
+          // Add full url
+          current[0].link = vm.$http.options.root + vm.$route.path
+          vm.setCurrentPost(current[0])
         }
-        if (this.getPosts.length) {
-          setCurrent(this.getPosts)
+        if (vm.getPosts.length) {
+          setCurrent(vm.getPosts)
           transition.next()
           return
         }
-        this.$http.get('static/articles/_data.json').then((response) => {
-          this.setPosts(response.data)
-          setCurrent(this.getPosts)
+        vm.$http.get('static/articles/_data.json').then((response) => {
+          vm.setPosts(response.data)
+          setCurrent(vm.getPosts)
           transition.next()
         })
       },
       data (transition) {
+        let vm = this
         let slug = transition.to.params.slug
-        this.$http.get('static/articles/' + slug + '.md').then((response) => {
-          this.$set('post.body', response.data)
+        vm.$http.get('static/articles/' + slug + '.md').then((response) => {
+          vm.$set('post.body', response.data)
           transition.next()
         }).catch((response) => {
           transition.redirect('/404')
@@ -112,9 +129,20 @@
   .title.-post { font-size: 45px; }
   
   .info-post {
-    padding: 30px 0;
-    margin: 30px 0;
-    border-bottom: 1px solid var(--border-color);
+    margin-top: 50px;
+  }
+
+  .box-share {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-top: 1px solid var(--border-color); 
+    border-bottom: 1px solid var(--border-color); 
+  }
+
+  .comments {
+    margin-top: 30px;
+    padding-top: 50px;
     border-top: 1px solid var(--border-color);
   }
 
