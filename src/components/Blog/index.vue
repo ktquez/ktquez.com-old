@@ -139,7 +139,7 @@
       }
 
       &:hover {
-        background: #ff7070;
+        background: #ED7196;
       }
     }
   }
