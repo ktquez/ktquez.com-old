@@ -2,5 +2,8 @@
 export const getPosts = ({blog}) => blog.posts
 export const getCurrentPost = ({blog}) => blog.currentPost
 
-/* NAV MOBILE */
+/* MODULE NAV MOBILE */
 export const getStateNavMobile = ({navMobile}) => navMobile.visible
+
+/* MODULE LANG */
+export const getLang = ({lang}) => lang.value

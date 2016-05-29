@@ -10,3 +10,8 @@ export const setCurrentPost = ({dispatch}, post) => {
 export const setStateNavMobile = ({ dispatch }) => {
   dispatch('SET_NAV_MOBILE')
 }
+
+/* MODULE LANG */
+export const setLang = ({dispatch}, lang) => {
+  dispatch('SET_LANG', lang)
+}
