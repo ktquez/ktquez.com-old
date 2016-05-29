@@ -15,3 +15,8 @@ export const setStateNavMobile = ({ dispatch }) => {
 export const setLang = ({dispatch}, lang) => {
   dispatch('SET_LANG', lang)
 }
+
+/* MODULE SEARCH */
+export const setSearch = ({dispatch}) => {
+  dispatch('SET_SEARCH')
+}

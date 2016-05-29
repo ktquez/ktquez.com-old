@@ -7,6 +7,7 @@
       <div class="loading"></div>
       <foo></foo>
     </div>
+    <search></search>
     <scroll-top></scroll-top>
     <hamburger></hamburger>
     <menu-mobile></menu-mobile>   
@@ -16,8 +17,9 @@
 <script>
   import Top from './Common/Header/index'
   import Social from './Common/Social'
-  import MenuMobile from './Common/NavMobile'
   import Foo from './Common/Footer/index'
+  import MenuMobile from './Common/NavMobile'
+  import Search from './Common/Search'
   import Hamburger from './Common/Hamburger'
   import ScrollTop from './Common/ScrollTop'
   import store from '../vuex/store'
@@ -29,7 +31,8 @@
       Social,
       Foo,
       ScrollTop,
-      MenuMobile
+      MenuMobile,
+      Search
     },
     store
   }

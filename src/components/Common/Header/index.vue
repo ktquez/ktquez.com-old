@@ -8,16 +8,23 @@
     <div class="c-t10 c-gg6 cpl dnone-m view-t">
       <menu :class="['navbar-header']"></menu>
     </div>   
+    <button role="button" class="icon search" @click="setSearch">&#xe90b;</button>    
   </header>   
 </template>
 
 <script>
   import Logo from './Logo'
   import Menu from '../NavBar'
+  import { setSearch } from '../../../vuex/actions'
   export default {
     components: {
       Logo,
       Menu
+    },
+    vuex: {
+      actions: {
+        setSearch
+      }
     }
   }
 </script>
@@ -25,7 +32,7 @@
 <style lang="postcss" scoped>
   
   :root {
-    @custom-media --medium-viewport (max-width: 1024px);     
+    @custom-media --medium-viewport (min-width: 640px) and (max-width: 1024px);     
   }
 
   .header{
@@ -39,7 +46,25 @@
     margin-top: 14px;
   }
 
+  .icon.search {
+    float: right;
+    color: #999;
+    font-size: 18px;
+    right: 0;
+    top: 7px;
+    position: absolute;
+    padding: 20px;
+
+    &:hover {
+      color: #4ac6b7;
+    }
+  }
+
   @media (--medium-viewport) {
+    .icon.search {
+      left: 150px;
+    }
+
     .navbar-header{
       float: right;
       margin-right: 20px;

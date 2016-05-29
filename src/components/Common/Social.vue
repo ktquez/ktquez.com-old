@@ -29,7 +29,7 @@
   .social {
     position: fixed;
     top: 90px;
-    right: 20px;
+    right: 10px;
     width: 30px;
     height: 100px;
     z-index: 5;
