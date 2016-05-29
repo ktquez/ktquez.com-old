@@ -4,7 +4,7 @@
       <article role="article">
         <h1 class="title -post fullX tac top-page margin-section">{{ currentPost.title }}</h1>
         <separate></separate>     
-        <post class="post fullX" :post="post.body"></post>
+        <post class="post fullX" :post="post"></post>
         <aside role="complementary" class="fullX info-post">
           <div class="c-m12 cpl box-share">
             <share></share>
@@ -43,21 +43,12 @@
   import Post from './Post'
   import Tag from '../Common/Tags'
   import Disqus from './Disqus'
-  import {
-    getPosts,
-    getCurrentPost
-  } from '../../vuex/getters'
-  import {
-    setPosts,
-    setCurrentPost
-  } from '../../vuex/actions'
+  import { getPosts, getCurrentPost, getLang } from '../../vuex/getters'
+  import { setPosts, setCurrentPost } from '../../vuex/actions'
   export default {
     data () {
       return {
-        post: {
-          info: {},
-          body: ''
-        },
+        post: '',
         shotname_disqus: 'ktquez'
       }
     },
@@ -76,6 +67,7 @@
     vuex: {
       getters: {
         getPosts,
+        getLang,
         currentPost: getCurrentPost
       },
       actions: {
@@ -100,7 +92,7 @@
           transition.next()
           return
         }
-        vm.$http.get('static/articles/_data.json').then((response) => {
+        vm.$http.get('static/articles/' + vm.getLang + '/_data.json').then((response) => {
           vm.setPosts(response.data)
           setCurrent(vm.getPosts)
           transition.next()
@@ -109,9 +101,10 @@
       data (transition) {
         let vm = this
         let slug = transition.to.params.slug
-        vm.$http.get('static/articles/' + slug + '.md').then((response) => {
-          vm.$set('post.body', response.data)
-          transition.next()
+        vm.$http.get('static/articles/' + vm.getLang + '/' + slug + '.md').then((response) => {
+          transition.next({
+            post: response.data
+          })
         }).catch((response) => {
           transition.redirect('/404')
         })

@@ -26,7 +26,7 @@
   import ShortAbout from './ShortAbout'
   import ItemPost from './ItemPost'
   import Separate from '../Common/Separate'
-  import { getPosts } from '../../vuex/getters'
+  import { getPosts, getLang } from '../../vuex/getters'
   import { setPosts } from '../../vuex/actions'
 
   export default {
@@ -60,7 +60,8 @@
     },
     vuex: {
       getters: {
-        getPosts
+        getPosts,
+        getLang
       },
       actions: {
         setPosts
@@ -68,15 +69,18 @@
     },
     route: {
       data (transition) {
+        let vm = this
         // Check if have posts in store
-        if (this.getPosts.length) {
+        if (vm.getPosts.length) {
           transition.next()
           return
         }
         // In another way get posts by ajax
-        this.$http.get('static/articles/_data.json').then((response) => {
-          this.setPosts(response.data)
+        vm.$http.get('static/articles/' + vm.getLang + '/_data.json').then((response) => {
+          vm.setPosts(response.data)
           transition.next()
+        }).catch((response) => {
+          transition.redirect('/404')
         })
       },
       waitForData: true
