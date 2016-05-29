@@ -219,6 +219,8 @@ input[type="password"] {
   .c-t11 { width: 91.66666667%; }
   .c-t12 { width: 100%; }
   .view-t { display:block !important; }
+  .dnone-t { display: none !important; }
+
 }
 
 @media only screen and (min-width: 481px) and (max-width: 800px){
