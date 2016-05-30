@@ -15,7 +15,7 @@
                 <img src="../../assets/avatar.png" alt="Alan Albuquerque (ktquez)" class="avatar img-circle -medium">      
               </div>
               <div class="c-m12 c-t9 c-g10 cpl box-info-author">
-                <strong class="title name fl">ALAN ALBUQUERQUE -</strong>
+                <a rel="author" href="https://plus.google.com/+ktquez?rel=author" class="title name fl">ALAN ALBUQUERQUE -</a>
                 <strong class="title nickname fl">KTQUEZ</strong>      
                 <div class="fullX about-me">
                   <p class="lspacing description">
@@ -144,6 +144,10 @@
     margin-right: 20px;
     width: calc(100% - 20px);
     border-right: 1px solid var(--border-color);  
+
+    & .title {
+      color: #333;
+    }
 
     & .nickname {
       margin-left: 6px;

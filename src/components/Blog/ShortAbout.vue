@@ -4,7 +4,7 @@
       <div class="fullX">
         <img src="../../assets/avatar.png" alt="Alan Albuquerque (ktquez)" class="img-circle -big">      
       </div>
-      <strong class="fullX title nickname">[ ktquez ]</strong>      
+      <a v-link="{ name: 'bio' }" rel="me" target="_blank" class="fullX link nickname">[ ktquez ]</a>      
       <strong class="fullX title name">ALAN ALBUQUERQUE</strong>
       <div class="fullX about-me">
         <p class="box-center7 lspacing description">
