@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/
 dist/
+src/articles/
 static/articles/
 config/env.js
 npm-debug.log
