@@ -11,6 +11,13 @@
         type: String
       }
     },
+    ready () {
+      marked.setOptions({
+        highlight: (code, lang) => {
+          return window.hljs.highlightAuto(code, [lang]).value
+        }
+      })
+    },
     filters: {
       marked
     }

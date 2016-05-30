@@ -57,8 +57,8 @@
   }
 
   code {
-    color: #777;
-    background: #fdfdfd;
+    color: #f2f2f2;
+    background: #333;
     border-radius: 4px;
   }
 
