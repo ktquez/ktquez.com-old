@@ -2,7 +2,7 @@
   <div class="home fullX">
     <short-about class="box-center5"></short-about>
     <separate></separate>
-    <section class="box-center5">
+    <section class="box-center5" role="region">
       <main class="fullX" role="main">
         <item-post v-for="post in postsByPage" :post="post"></item-post>
       </main>
@@ -83,6 +83,7 @@
           transition.redirect('/404')
         })
       },
+      canReuse: false,
       waitForData: true
     },
     components: {

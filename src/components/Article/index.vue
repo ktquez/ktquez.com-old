@@ -109,6 +109,7 @@
           transition.redirect('/404')
         })
       },
+      canReuse: false,
       waitForData: true
     }
   }
