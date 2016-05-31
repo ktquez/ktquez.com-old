@@ -49,8 +49,26 @@
     data () {
       return {
         post: '',
-        shotname_disqus: 'ktquez'
+        shotname_disqus: 'ktquez',
+        meta: {}
       }
+    },
+    ready () {
+      this.$set('meta.title', document.title)
+      document.title = this.currentPost.title
+      let description = document.querySelector('meta[name="description"]')
+      this.$set('meta.description', description.getAttribute('content'))
+      description.setAttribute('content', this.currentPost.description.substr(0, 130))
+      let canonical = document.querySelector('link[rel="canonical"]')
+      this.$set('meta.canonical', canonical.getAttribute('href'))
+      canonical.setAttribute('href', this.currentPost.link)
+    },
+    destroyed () {
+      document.title = this.meta.title
+      let description = document.querySelector('meta[name="description"]')
+      description.setAttribute('content', this.meta.description.substr(0, 130))
+      let canonical = document.querySelector('link[rel="canonical"]')
+      canonical.setAttribute('href', this.meta.canonical)
     },
     components: {
       Separate,
