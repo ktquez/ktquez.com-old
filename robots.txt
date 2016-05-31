@@ -1,0 +1,3 @@
+User-agent: * 
+
+Sitemap: http://ktquez.com/sitemap.xml

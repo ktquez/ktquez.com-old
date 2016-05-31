@@ -1,0 +1,35 @@
+The humans.txt iniciativa legal do (humanstxt.org), para falar um pouco de quem está por trás das aplicações construídas na web, equipe envolvida e Stack usado. Lembrando, somos humanos e não máquinas. Um grande obrigado a você que acessou o meu blog pessoal.
+
+/* TEAM */
+  Title: FullStack web Developer 
+  Name: Alan Silva de Albuquerque
+  Site: http://ktquez.com/about
+  Contact: ktquez [at] gmail.com
+  Twitter: @ktquez
+  Location: Recife, Pernambuco, Brazil
+
+/* THANKS */
+  Name: Evan You (https://twitter.com/youyuxi)
+
+/* SITE */
+  Site name: Personal Blog SPA by ktquez
+  Site URL: http://ktquez.com
+  Last update: 2016/05/31
+  Language: Portuguese
+  Twitter: @ktquez
+  Contact: http://ktquez.com/contact
+  Built with: Vue.js, HTML5, CSS3, Markdown
+  Software: Sublime Text
+
+ 
+  ooooo     ooooo
+  oo oo     oo oo
+  oo oo     oo oo
+  ooooo     ooooo
+
+  oo           oo
+   oo         oo
+    oo       oo
+      ooooooo
+         ooo
+          o
