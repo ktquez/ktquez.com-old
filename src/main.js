@@ -24,6 +24,10 @@ router.beforeEach(() => {
   window.scrollTo(0, 0)
 })
 
+router.afterEach((transition) => {
+  window.ga('send', 'pageview', transition.to.path)
+})
+
 // redirect
 router.redirect({
   '/': '/blog'
