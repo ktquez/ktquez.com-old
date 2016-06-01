@@ -1,9 +1,10 @@
 import Blog from './components/Blog/index'
+import Article from './components/Article/index'
 import Bio from './components/Pages/Bio'
 import Projects from './components/Pages/Projects'
 import Lab from './components/Pages/Lab'
 import Contact from './components/Pages/Contact'
-import Article from './components/Article/index'
+import Writer from './components/Writer/index'
 import NotFound from './components/Pages/NotFound'
 
 export const routes = {
@@ -34,6 +35,10 @@ export const routes = {
   '/contact': {
     name: 'contact',
     component: Contact
+  },
+  '/writer': {
+    name: 'writer',
+    component: Writer
   },
   '*': {
     name: '404',
