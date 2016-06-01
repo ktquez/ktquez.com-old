@@ -5,6 +5,9 @@
     <section class="box-center5" role="region">
       <main class="fullX" role="main">
         <item-post v-for="post in postsByPage" :post="post"></item-post>
+        <div class=" fullX tac no-posts" v-if="(!this.getPosts.length)">
+          ESTOU CONTRUINDO UNS ARTIGOS LEGAIS
+        </div>
       </main>
       <div class="fullX">
         <div class="paginate">
@@ -52,10 +55,10 @@
         return posts.slice((vm.paginate.page - 1) * vm.paginate.perPage, vm.paginate.page * vm.paginate.perPage)
       },
       news () {
-        return this.paginate.page !== 1
+        return this.paginate.page !== 1 && (this.getPosts.length)
       },
       older () {
-        return this.paginate.page !== this.paginate.totalPages
+        return this.paginate.page !== this.paginate.totalPages && (this.getPosts.length)
       }
     },
     vuex: {
@@ -100,6 +103,8 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
+  .no-posts { margin-top: 30px; }
 
   .paginate {
     margin-top: 20px;
