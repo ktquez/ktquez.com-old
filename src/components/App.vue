@@ -53,7 +53,7 @@
     font-family: var(--font);
     background-color: var(--bg-body);
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   code {
