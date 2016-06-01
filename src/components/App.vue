@@ -71,6 +71,12 @@
     transition-delay: .2s;
   }
 
+  .input {
+    border: 1px solid #efefef;
+    padding: 10px;
+    width: calc(100% - 20px);
+  }
+
   .loading {
     opacity: 0;
     position: fixed;

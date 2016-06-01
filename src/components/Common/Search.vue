@@ -100,10 +100,7 @@
     margin-bottom: 10px;
 
     & .input {
-      border: 1px solid #efefef;
-      padding: 10px;
       margin-top: 10px;
-      width: calc(100% - 20px);
     }
   }
   
