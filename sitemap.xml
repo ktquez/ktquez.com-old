@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://ktquez.com/blog</loc>
+    <lastmod>2016-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://ktquez.com</loc>
+    <lastmod>2016-06-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://ktquez.com/projects</loc>
+    <lastmod>2016-06-01</lastmod>
+    <changefreq>monthly</changefreq>    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://ktquez.com/about</loc>
+    <lastmod>2016-06-01</lastmod>
+  </url>
+  <url>
+    <loc>http://ktquez.com/contact</loc>
+    <lastmod>2016-06-01</lastmod>
+  </url>
+  <url>
+    <loc>http://ktquez.com/lab</loc>
+    <lastmod>2016-06-01</lastmod>
+  </url>
+</urlset>
