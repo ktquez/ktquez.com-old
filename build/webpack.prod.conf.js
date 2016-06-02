@@ -15,6 +15,9 @@ var env = process.env.NODE_ENV === 'testing'
 // HTML Webpack plugin + files to Surge
 var filename = ['index.html', '200.html', '404.html']
 var htmlWebpackFiles = filename.map(function (file) {
+  // generate dist index.html with correct asset hash for caching.
+  // you can customize output by editing /index.ejs
+  // see https://github.com/ampedandwired/html-webpack-plugin
   return new HtmlWebpackPlugin({
     filename: file,
     template: 'index.ejs',
@@ -64,31 +67,13 @@ module.exports = merge(baseWebpackConfig, {
     new webpack.optimize.OccurenceOrderPlugin(),
     // extract css into its own file
     new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css')),
-    // generate dist index.html with correct asset hash for caching.
-    // you can customize output by editing /index.html
-    // see https://github.com/ampedandwired/html-webpack-plugin
-    new HtmlWebpackPlugin({
-      filename: process.env.NODE_ENV === 'testing'
-        ? 'index.html'
-        : config.build.index,
-      template: 'index.html',
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
-        // more options:
-        // https://github.com/kangax/html-minifier#options-quick-reference
-      },
-      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency'
-    }),
     // Copy files
     new CopyWebpackPlugin([
       { from: path.resolve(__dirname, '../src/articles'), to: 'static/articles' },
       { from: path.resolve(__dirname, '../robots.txt'), to: 'robots.txt' },
       { from: path.resolve(__dirname, '../sitemap.xml'), to: 'sitemap.xml' },
       { from: path.resolve(__dirname, '../humans.txt'), to: 'humans.txt' },
+      { from: path.resolve(__dirname, '../src/assets/*.png'), to: 'static/img/' },
       { from: path.resolve(__dirname, '../CNAME'), to: 'CNAME', toType: 'file' }
     ], {}),
     // split vendor js into its own file
