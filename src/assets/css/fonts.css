@@ -15,25 +15,25 @@
 }
 
 @font-face {
-    font-family: 'ktquez';
-    font-weight: normal;
-    font-style: normal;
-    src:  url('../font-icon/ktquez.eot?yfetij');
-    src:  url('../font-icon/ktquez.eot?yfetij#iefix') format('embedded-opentype'), 
-    url('../font-icon/ktquez.ttf?yfetij') format('truetype'), 
-    url('../font-icon/ktquez.woff?yfetij') format('woff'), 
-    url('../font-icon/ktquez.svg?yfetij#ktquez') format('svg');
+  font-family: 'ktquez';
+  font-weight: normal;
+  font-style: normal;
+  src:  url('../font-icon/ktquez.eot?yfetij');
+  src:  url('../font-icon/ktquez.eot?yfetij#iefix') format('embedded-opentype'), 
+  url('../font-icon/ktquez.ttf?yfetij') format('truetype'), 
+  url('../font-icon/ktquez.woff?yfetij') format('woff'), 
+  url('../font-icon/ktquez.svg?yfetij#ktquez') format('svg');
 }
 
 .icon {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'ktquez' !important;
-    float:left;
-    color: #ddd;
-    font-size: 25px;
-    transition: color .5s ease-in-out;
-    
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ktquez' !important;
+  float:left;
+  color: #ddd;
+  font-size: 25px;
+  transition: color .5s ease-in-out;
+  
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
