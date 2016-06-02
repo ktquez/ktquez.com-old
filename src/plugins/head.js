@@ -1,5 +1,5 @@
 const opt = {
-  title: document.title,
+  compl: document.title,
   separator: '|'
 }
 
@@ -27,8 +27,12 @@ const undo = (states) => {
 
 const headTitle = (val) => {
   if (!val) return
-  diffTitle.before = opt.title
-  document.title = `${val} ${opt.separator} ${opt.title}`
+  diffTitle.before = opt.compl
+  if (typeof val === 'object') {
+    document.title = `${val.inner} ${val.separator || ''} ${val.compl || ''}`
+    return
+  }
+  document.title = `${val} ${opt.separator} ${opt.compl}`
 }
 
 const headMeta = (objMeta) => {
@@ -87,7 +91,7 @@ const headLink = (objLink) => {
 }
 
 export const head = {
-  compiled: function () {
+  ready () {
     let head = this.$options.head
     if (!head) return
     if (head.title) {
