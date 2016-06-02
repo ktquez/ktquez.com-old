@@ -18,7 +18,20 @@
 </template>
 
 <script>
-  export default {}
+  import { head } from '../../plugins/head'
+  export default {
+    extends: head,
+    head: {
+      title: 'Será um prazer!',
+      link () {
+        return {
+          canonical: {
+            href: this.$http.options.root + this.$route.path + '/'
+          }
+        }
+      }
+    }
+  }
 </script>
 
 <style lang="postcss" scoped>

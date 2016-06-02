@@ -61,12 +61,31 @@
 <script>
   import TopPage from './TopPages'
   import Separate from '../Common/Separate'
+  import { head } from '../../plugins/head'
   export default {
+    extends: head,
     data () {
       return {
         info: {
           title: 'PROJETOS',
           description: 'Onde desenvolvo e participo'
+        }
+      }
+    },
+    head: {
+      title: 'Contribuição, sempre!',
+      meta () {
+        return {
+          name: {
+            description: 'Desenvolvendo e participando de projetos abertos, passando conhecimento, aprendendo e contribuindo para a web ser ainda mais impressionante'
+          }
+        }
+      },
+      link () {
+        return {
+          canonical: {
+            href: this.$http.options.root + this.$route.path + '/'
+          }
         }
       }
     },

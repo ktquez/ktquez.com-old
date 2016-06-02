@@ -85,7 +85,9 @@
   import TopPage from './TopPages'
   import Separate from '../Common/Separate'
   import Tag from '../Common/Tags'
+  import { head } from '../../plugins/head'
   export default {
+    extends: head,
     data () {
       return {
         info: {
@@ -115,6 +117,23 @@
           'SEO',
           'UX / UI'
         ]
+      }
+    },
+    head: {
+      title: 'Sobre mim',
+      meta () {
+        return {
+          name: {
+            description: 'Conheça um pouco mais sobre mim, sou FullStack Web Developer, focado em PHP e Javascript ...'
+          }
+        }
+      },
+      link () {
+        return {
+          canonical: {
+            href: this.$http.options.root + this.$route.path + '/'
+          }
+        }
       }
     },
     components: {
