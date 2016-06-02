@@ -7,10 +7,29 @@ var baseWebpackConfig = require('./webpack.base.conf')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
-// var CleanWebpackPlugin = require('clean-webpack-plugin')
+var CleanWebpackPlugin = require('clean-webpack-plugin')
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : config.build.env
+
+// HTML Webpack plugin + files to Surge
+var filename = ['index.html', '200.html', '404.html']
+var htmlWebpackFiles = filename.map(function (file) {
+  return new HtmlWebpackPlugin({
+    filename: file,
+    template: 'index.html',
+    inject: true,
+    minify: {
+      removeComments: true,
+      collapseWhitespace: true,
+      removeAttributeQuotes: true
+      // more options:
+      // https://github.com/kangax/html-minifier#options-quick-reference
+    },
+    // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+    chunksSortMode: 'dependency'
+  })
+})
 
 module.exports = merge(baseWebpackConfig, {
   module: {
@@ -29,13 +48,10 @@ module.exports = merge(baseWebpackConfig, {
     })
   },
   plugins: [
-    // http://vuejs.github.io/vue-loader/workflow/production.html
-    new CopyWebpackPlugin([
-      { 
-        from: path.resolve(__dirname, '../src/articles'),
-        to: 'static/articles'
-      }
-    ], {}),
+    // http://vuejs.github.io/vue-loader/workflow/production.html  
+    new CleanWebpackPlugin(['dist'], {
+      root: path.resolve(__dirname, '../'),
+    }),  
     new webpack.DefinePlugin({
       'process.env': env
     }),
@@ -66,6 +82,14 @@ module.exports = merge(baseWebpackConfig, {
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),
+    // Copy files
+    new CopyWebpackPlugin([
+      { from: path.resolve(__dirname, '../src/articles'), to: 'static/articles' },
+      { from: path.resolve(__dirname, '../robots.txt'), to: 'robots.txt' },
+      { from: path.resolve(__dirname, '../sitemap.xml'), to: 'sitemap.xml' },
+      { from: path.resolve(__dirname, '../humans.txt'), to: 'humans.txt' },
+      { from: path.resolve(__dirname, '../CNAME'), to: 'CNAME', toType: 'file' }
+    ], {}),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
@@ -85,5 +109,5 @@ module.exports = merge(baseWebpackConfig, {
       name: 'manifest',
       chunks: ['vendor']
     })
-  ]
+  ].concat(htmlWebpackFiles)
 })
