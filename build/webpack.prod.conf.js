@@ -17,7 +17,7 @@ var filename = ['index.html', '200.html', '404.html']
 var htmlWebpackFiles = filename.map(function (file) {
   return new HtmlWebpackPlugin({
     filename: file,
-    template: 'index.html',
+    template: 'index.ejs',
     inject: true,
     minify: {
       removeComments: true,
@@ -26,6 +26,7 @@ var htmlWebpackFiles = filename.map(function (file) {
       // more options:
       // https://github.com/kangax/html-minifier#options-quick-reference
     },
+    googleAnalytics: true,
     // necessary to consistently work with multiple chunks via CommonsChunkPlugin
     chunksSortMode: 'dependency'
   })

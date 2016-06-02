@@ -25,7 +25,7 @@ router.beforeEach(() => {
 })
 
 router.afterEach((transition) => {
-  window.ga('send', 'pageview', transition.to.path)
+  if (window.ga) window.ga('send', 'pageview', transition.to.path)
 })
 
 // redirect
