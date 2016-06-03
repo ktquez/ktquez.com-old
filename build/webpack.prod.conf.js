@@ -73,7 +73,6 @@ module.exports = merge(baseWebpackConfig, {
       { from: path.resolve(__dirname, '../robots.txt'), to: 'robots.txt' },
       { from: path.resolve(__dirname, '../sitemap.xml'), to: 'sitemap.xml' },
       { from: path.resolve(__dirname, '../humans.txt'), to: 'humans.txt' },
-      { from: path.resolve(__dirname, '../src/assets/*.png'), to: 'static/img/' },
       { from: path.resolve(__dirname, '../CNAME'), to: 'CNAME', toType: 'file' }
     ], {}),
     // split vendor js into its own file

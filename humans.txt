@@ -20,16 +20,4 @@ The humans.txt iniciativa legal do (humanstxt.org), para falar um pouco de quem 
   Contact: http://ktquez.com/contact
   Built with: Vue.js, HTML5, CSS3, Markdown
   Software: Sublime Text
-
- 
-  ooooo     ooooo
-  oo oo     oo oo
-  oo oo     oo oo
-  ooooo     ooooo
-
-  oo           oo
-   oo         oo
-    oo       oo
-      ooooooo
-         ooo
-          o
+  
