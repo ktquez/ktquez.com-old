@@ -15,6 +15,7 @@ const undoTitle = (state) => {
 }
 
 const undo = (states) => {
+  if (!states.length) return
   let head = getHead()
   states.map((state) => {
     if (state.before) {
