@@ -71,7 +71,7 @@
           let rexp = mapLetters[letter]
           value = value.toLowerCase()
                       .replace(rexp, letter)
-                      .replace(/\s/g, '-')
+                      .replace(/(\s|\.)/g, '-')
         }
 
         return value
