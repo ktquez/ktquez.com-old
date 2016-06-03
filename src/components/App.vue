@@ -118,6 +118,17 @@
     letter-spacing: .5px;    
   }
 
+  .picture {
+    margin: 0;
+
+    & figcaption {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: 12px;
+      color: #999;
+    }
+  }
+
   .article {
     font-family: var(--font);
   }

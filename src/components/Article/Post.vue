@@ -37,6 +37,10 @@
       font-weight: bold;
     }
 
+    & img {
+      width: 100%;
+    }
+
     & a {
       color: #4ac6b7;
     }
