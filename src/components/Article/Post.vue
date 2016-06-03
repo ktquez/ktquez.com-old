@@ -37,6 +37,10 @@
       font-weight: bold;
     }
 
+    & a {
+      color: #4ac6b7;
+    }
+
     & hr {
       border: 1px solid #dedede;
     }
