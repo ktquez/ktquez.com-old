@@ -10,6 +10,7 @@ The humans.txt iniciativa legal do (humanstxt.org), para falar um pouco de quem 
 
 /* THANKS */
   Name: Evan You (https://twitter.com/youyuxi)
+  Name: Surge (https://twitter.com/surge_sh)
 
 /* SITE */
   Site name: Personal Blog SPA by ktquez

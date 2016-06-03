@@ -29,4 +29,8 @@
     <loc>http://ktquez.com/lab</loc>
     <lastmod>2016-06-01</lastmod>
   </url>
+  <url>
+    <loc>http://ktquez.com/blog/acompanhando-sua-spa-vuejs-no-google-analytics-usando-vue-router</loc>
+    <lastmod>2016-06-03</lastmod>
+  </url>
 </urlset>
