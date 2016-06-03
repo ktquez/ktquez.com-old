@@ -45,30 +45,35 @@
   import Disqus from './Disqus'
   import { getPosts, getCurrentPost, getLang } from '../../vuex/getters'
   import { setPosts, setCurrentPost } from '../../vuex/actions'
+  import { head } from '../../plugins/head'
   export default {
+    extends: head,
     data () {
       return {
         post: '',
-        shotname_disqus: 'ktquez',
-        meta: {}
+        shotname_disqus: 'ktquez'
       }
     },
-    ready () {
-      this.$set('meta.title', document.title)
-      document.title = this.currentPost.title
-      let description = document.querySelector('meta[name="description"]')
-      this.$set('meta.description', description.getAttribute('content'))
-      description.setAttribute('content', this.currentPost.description.substr(0, 130))
-      let canonical = document.querySelector('link[rel="canonical"]')
-      this.$set('meta.canonical', canonical.getAttribute('href'))
-      canonical.setAttribute('href', this.currentPost.link)
-    },
-    destroyed () {
-      document.title = this.meta.title
-      let description = document.querySelector('meta[name="description"]')
-      description.setAttribute('content', this.meta.description.substr(0, 130))
-      let canonical = document.querySelector('link[rel="canonical"]')
-      canonical.setAttribute('href', this.meta.canonical)
+    head: {
+      title () {
+        return {
+          inner: this.currentPost.title
+        }
+      },
+      meta () {
+        return {
+          name: {
+            description: this.currentPost.description.substr(0, 130)
+          }
+        }
+      },
+      link () {
+        return {
+          canonical: {
+            href: this.currentPost.link + '/'
+          }
+        }
+      }
     },
     components: {
       Separate,
