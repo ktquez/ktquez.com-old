@@ -12,6 +12,9 @@
           <input type="text" name="imgPath" class="input" v-model="imgPath" placeholder="PATH DA IMAGEM">
         </div>
         <div class="box-field">
+          <input type="text" name="caption" class="input" v-model="caption" placeholder="CAPTION DA IMAGEM">
+        </div>
+        <div class="box-field">
           <textarea name="description" class="input" rows="3" v-model="description" placeholder="DIGITE A DESCRIÇÃO DA POSTAGEM"></textarea>
         </div>
         <pre class="fullX">
@@ -19,7 +22,10 @@
     {
       "title": "{{ title }}",
       "slug": "{{ title | slug }}",
-      "picture": "{{ imgPath }}",
+      "picture": {
+        "img": "{{ imgPath }}",
+        "caption": "{{ caption }}"
+      },
       "date": "{{ new Date() }}",
       "tags": "{{ tags }}",
       "description": "{{ description }}"
