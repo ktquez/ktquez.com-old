@@ -70,6 +70,7 @@ module.exports = merge(baseWebpackConfig, {
     // Copy files
     new CopyWebpackPlugin([
       { from: path.resolve(__dirname, '../src/articles'), to: 'static/articles' },
+      { from: path.resolve(__dirname, '../src/assets/posts'), to: 'static/img/posts' },
       { from: path.resolve(__dirname, '../robots.txt'), to: 'robots.txt' },
       { from: path.resolve(__dirname, '../sitemap.xml'), to: 'sitemap.xml' },
       { from: path.resolve(__dirname, '../humans.txt'), to: 'humans.txt' },

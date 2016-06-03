@@ -20,10 +20,8 @@ module.exports = merge(baseWebpackConfig, {
   devtool: '#eval-source-map',
   plugins: [
     new CopyWebpackPlugin([
-      { 
-        from: path.resolve(__dirname, '../src/articles'),
-        to: 'static/articles'
-      }
+      { from: path.resolve(__dirname, '../src/articles'), to: 'static/articles' },
+      { from: path.resolve(__dirname, '../src/assets/posts'), to: 'static/img/posts' },      
     ], {}),
     new webpack.DefinePlugin({
       'process.env': config.dev.env
