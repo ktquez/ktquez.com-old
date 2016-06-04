@@ -26,7 +26,7 @@
               </p>
             </li>
             <li class="item">
-              <a class="link" title="Tema Wordpress Ktquez" target="_blank" href="http://videophp.net/">
+              <a class="link" title="Tema Wordpress Ktquez" target="_blank" href="https://github.com/ktquez/wp-theme-ktquez">
                 <b>wp-theme-ktquez</b>
               </a>
               <p class="description">
@@ -34,8 +34,8 @@
               </p>
             </li>
             <li class="item">
-              <a class="link" title="Uma quase vídeo documentação em PT-BR da linguagem web mais usada no mundo (PHP)" target="_blank" href="https://github.com/ktquez/wp-theme-ktquez">
-                <b>videophp.net</b>
+              <a class="link" title="Uma quase vídeo documentação em PT-BR da linguagem web mais usada no mundo (PHP)" target="_blank" href="https://github.com/ktquez/videophp.net">
+                <b>videophp.net (coming soon)</b>
               </a>
               <p class="description">
                 Uma quase vídeo documentação em PT-BR da linguagem web mais usada no mundo (PHP)
