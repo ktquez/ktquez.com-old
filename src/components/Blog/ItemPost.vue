@@ -7,7 +7,7 @@
     </a>
     <small class="fullX info-article title">Postado em <time datetime="{{ post.date }}">{{ post.date | date }}</time> by <a class="link" href="https://twitter.com/ktquez" target="_blank">@ktquez</a></small>
     <div class="fullX picture" v-if="post.picture.show">
-      <img class="fullX" src="/static/img/posts/{{ this.post.picture.img }}" alt="{{ post.title }}">
+      <img class="fullX" :src="imgPost" alt="{{ post.title }}">
     </div>
     <p class="fullX lspacing txt description">
       {{ post.description }}
@@ -22,6 +22,11 @@
       post: {
         type: Object,
         required: true
+      }
+    },
+    data () {
+      return {
+        imgPost: '/static/img/posts/' + this.post.picture.img
       }
     },
     filters: {

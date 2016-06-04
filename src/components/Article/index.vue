@@ -5,7 +5,7 @@
         <h1 class="title -post fullX tac top-page margin-section">{{ currentPost.title }}</h1>
         <separate></separate>     
         <figure class="fullX picture" v-if="currentPost.picture.show">
-          <img class="fullX" src="/static/img/posts/{{ this.currentPost.picture.img }}" alt="{{ currentPost.title }}">
+          <img class="fullX" :src="'/static/img/posts/' + currentPost.picture.img" alt="{{ currentPost.title }}">
           <figcaption class="fullX tac" v-show="currentPost.picture.caption">{{ currentPost.picture.caption }}</figcaption>
         </figure>
         <post class="post fullX" :post="post"></post>
