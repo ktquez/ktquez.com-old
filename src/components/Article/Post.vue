@@ -11,7 +11,7 @@
         type: String
       }
     },
-    ready () {
+    compiled () {
       marked.setOptions({
         highlight: (code, lang) => {
           return window.hljs.highlightAuto(code, [lang]).value
