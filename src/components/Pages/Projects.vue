@@ -84,7 +84,7 @@
       link () {
         return {
           canonical: {
-            href: this.$http.options.root + this.$route.path + '/'
+            href: this.$el.baseURI + '/'
           }
         }
       }
