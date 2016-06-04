@@ -6,117 +6,99 @@ const opt = {
 let diff = []
 let diffTitle = {}
 
-const getHead = () => document.getElementsByTagName('head')[0]
-
-const undoTitle = (state) => {
-  if (state.before) {
+const util = {
+  getHead () {
+    return document.getElementsByTagName('head')[0]
+  },
+  undoTitle (state) {
+    if (!state.before) return
     document.title = state.before
-  }
-}
-
-const undo = (states) => {
-  if (!states.length) return
-  let head = getHead()
-  states.map((state) => {
-    if (state.before) {
-      head.replaceChild(state.before, state.after)
-      return
-    }
-    head.removeChild(state.after)
-  })
-}
-
-const headTitle = (val) => {
-  if (!val) return
-  diffTitle.before = opt.compl
-  if (typeof val === 'object') {
-    document.title = `${val.inner} ${val.separator || ''} ${val.compl || ''}`
-    return
-  }
-  document.title = `${val} ${opt.separator} ${opt.compl}`
-}
-
-const headMeta = (objMeta) => {
-  if (!objMeta) return
-  let head = getHead()
-  Object.keys(objMeta).map((prop) => {
-    let meta = objMeta[prop]
-    Object.keys(meta).map((value) => {
-      // set state of elements
-      let state = {}
-      let el = head.querySelector('meta[' + prop + '="' + value + '"]') || document.createElement('meta')
+  },
+  undo (states) {
+    if (!states.length) return
+    let head = this.getHead()
+    states.map((state) => {
+      (state.before) ? head.replaceChild(state.before, state.after) : head.removeChild(state.after)
+    })
+  },
+  title (val) {
+    if (!val) return
+    diffTitle.before = opt.compl
+    document.title = `${val.inner} ${val.separator || opt.separator} ${val.compl || opt.compl}`
+  },
+  meta (objMeta) {
+    if (!objMeta) return
+    let head = this.getHead()
+    let state = {}
+    Object.keys(objMeta).map((prop) => {
+      let meta = objMeta[prop]
+      Object.keys(meta).map((value) => {
+        // set state of elements
+        let el = head.querySelector('meta[' + prop + '="' + value + '"]') || document.createElement('meta')
+        let clone = el.cloneNode(true)
+        // Assign Content
+        el.setAttribute('content', meta[value])
+        // If exists element
+        if (el.getAttribute(prop)) {
+          state.before = clone
+          state.after = el
+          diff.push(state)
+          return
+        }
+        // If not exists element
+        el.setAttribute(prop, value)
+        head.appendChild(el)
+        state.after = el
+        diff.push(state)
+      })
+    })
+  },
+  link (objLink) {
+    if (!objLink) return
+    let head = this.getHead()
+    let state = {}
+    Object.keys(objLink).map((rel) => {
+      let el = head.querySelector('link[rel="' + rel + '"]') || document.createElement('link')
+      let props = objLink[rel]
       let clone = el.cloneNode(true)
-      // Assign Content
-      el.setAttribute('content', meta[value])
+      // Assign for each the props
+      Object.keys(props).map((prop) => {
+        el.setAttribute(prop, props[prop])
+      })
       // If exists element
-      if (el.getAttribute(prop)) {
+      if (el.getAttribute('rel')) {
         state.before = clone
         state.after = el
         diff.push(state)
         return
       }
       // If not exists element
-      el.setAttribute(prop, value)
+      el.setAttribute('rel', rel)
       head.appendChild(el)
       state.after = el
       diff.push(state)
     })
-  })
-}
-
-const headLink = (objLink) => {
-  if (!objLink) return
-  let head = getHead()
-  Object.keys(objLink).map((rel) => {
-    let state = {}
-    let el = head.querySelector('link[rel="' + rel + '"]') || document.createElement('link')
-    let props = objLink[rel]
-    let clone = el.cloneNode(true)
-    // Assign for each the props
-    Object.keys(props).map((prop) => {
-      el.setAttribute(prop, props[prop])
-    })
-    // If exists element
-    if (el.getAttribute('rel')) {
-      state.before = clone
-      state.after = el
-      diff.push(state)
-      return
-    }
-    // If not exists element
-    el.setAttribute('rel', rel)
-    head.appendChild(el)
-    state.after = el
-    diff.push(state)
-  })
+  }
 }
 
 export const head = {
   ready () {
+    let self = this
     let head = this.$options.head
     if (!head) return
-    if (head.title) {
-      let title = (typeof head.title === 'string') ? head.title : head.title.bind(this)()
-      headTitle(title)
-    }
-    if (head.meta) {
-      let meta = (typeof head.meta === 'object') ? head.meta : head.meta.bind(this)()
-      headMeta(meta)
-    }
-    if (head.link) {
-      let link = (typeof head.link === 'object') ? head.link : head.link.bind(this)()
-      headLink(link)
-    }
+    Object.keys(head).map((key) => {
+      if (head[key]) {
+        let obj = (typeof head[key] === 'object') ? head[key] : head[key].bind(self)()
+        util[key](obj)
+      }
+    })
   },
   destroyed () {
     let head = this.$options.head
-    let hasUndo = typeof head.undo === 'undefined' || head.undo ? true : head.undo
-    if (!hasUndo) {
-      diff = []
-      return
+    if (head.undo || typeof head.undo === 'undefined') {
+      util.undoTitle(diffTitle)
+      util.undo(diff)
     }
-    undoTitle(diffTitle)
-    undo(diff)
     diff = []
   }
 }
