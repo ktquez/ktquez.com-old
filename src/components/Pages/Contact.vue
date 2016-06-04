@@ -22,7 +22,9 @@
   export default {
     extends: head,
     head: {
-      title: 'Será um prazer!',
+      title: {
+        inner: 'Será um prazer'
+      },
       link () {
         return {
           canonical: {

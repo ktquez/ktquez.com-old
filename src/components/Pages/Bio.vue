@@ -120,7 +120,9 @@
       }
     },
     head: {
-      title: 'Sobre mim',
+      title: {
+        inner: 'Sobre mim'
+      },
       meta () {
         return {
           name: {

@@ -73,7 +73,9 @@
       }
     },
     head: {
-      title: 'Contribuição, sempre!',
+      title: {
+        inner: 'Contribuição, sempre'
+      },
       meta () {
         return {
           name: {
