@@ -110,8 +110,11 @@ export const head = {
   },
   destroyed () {
     let head = this.$options.head
-    let hasUndo = head.undo || true
-    if (!hasUndo) return
+    let hasUndo = typeof head.undo === 'undefined' || head.undo ? true : head.undo
+    if (!hasUndo) {
+      diff = []
+      return
+    }
     undoTitle(diffTitle)
     undo(diff)
     diff = []
