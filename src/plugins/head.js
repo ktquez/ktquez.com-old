@@ -102,14 +102,3 @@ export const head = {
     diff = []
   }
 }
-
-const plugin = {
-  install: function (Vue, options) {
-    if (options) { Vue.util.extend(opt, options) }
-    Vue.options = Vue.util.mergeOptions(Vue.options, head)
-  }
-}
-
-plugin.version = '0.0.1'
-
-export default plugin
