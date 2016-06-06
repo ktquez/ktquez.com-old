@@ -2,23 +2,34 @@
   <div class="fullX box-writer">
     <div class="c-m12 c-t6 cpl">
       <div class="writer">
-        <div class="box-field">
-          <input type="text" name="title" class="input" v-model="title" placeholder="DIGITE O TÍTULO">
+        <button type="button" class="link-see-info fullX link" @click="setShow('info')">
+          <span class="txt fl">PREENCHER INFORMAÇÕES</span>
+          <span class="icon" :class="{ '-up': show.info }">&#xe90a;</span>
+        </button>
+        <div class="see-info fade-fast" :class="{'-open': show.info }">
+          <div class="box-field">
+            <input type="text" name="title" class="input" v-model="title" placeholder="DIGITE O TÍTULO">
+          </div>
+          <div class="box-field">
+            <input type="text" name="tags" class="input" v-model="tags" placeholder="DIGITE AS TAGS">
+          </div>
+          <div class="box-field">
+            <input type="text" name="imgPath" class="input" v-model="imgPath" placeholder="PATH DA IMAGEM">
+          </div>
+          <div class="box-field">
+            <input type="text" name="caption" class="input" v-model="caption" placeholder="CAPTION DA IMAGEM">
+          </div>
+          <div class="box-field">
+            <textarea name="description" class="input" rows="3" v-model="description" placeholder="DIGITE A DESCRIÇÃO DA POSTAGEM"></textarea>
+          </div>          
         </div>
-        <div class="box-field">
-          <input type="text" name="tags" class="input" v-model="tags" placeholder="DIGITE AS TAGS">
-        </div>
-        <div class="box-field">
-          <input type="text" name="imgPath" class="input" v-model="imgPath" placeholder="PATH DA IMAGEM">
-        </div>
-        <div class="box-field">
-          <input type="text" name="caption" class="input" v-model="caption" placeholder="CAPTION DA IMAGEM">
-        </div>
-        <div class="box-field">
-          <textarea name="description" class="input" rows="3" v-model="description" placeholder="DIGITE A DESCRIÇÃO DA POSTAGEM"></textarea>
-        </div>
-        <pre class="fullX">
-          <code class="fullX">
+        <button type="button" class="link-see-info fullX link" @click="setShow('json')">
+          <span class="txt fl">VER JSON INFORMAÇÕES</span>
+          <span class="icon" :class="{ '-up': show.json }">&#xe90a;</span>
+        </button>
+        <div class="see-info fade-fast" :class="{'-open': show.json }">
+          <pre class="fullX">
+            <code class="fullX">
     {
       "title": "{{ title }}",
       "slug": "{{ title | slug }}",
@@ -30,11 +41,13 @@
       "tags": "{{ tags }}",
       "description": "{{ description }}"
     }
-          </code>
-        </pre>
+            </code>
+          </pre>
+          
+        </div>
         
         <div class="box-field box-body">
-          <textarea name="body" class="input" rows="25" v-model="body" placeholder="CORPO DO ARTIGO"></textarea>
+          <textarea name="body" class="input" rows="30" v-model="body" placeholder="CORPO DO ARTIGO"></textarea>
         </div>
       </div>
     </div>
@@ -56,7 +69,20 @@
         description: '',
         imgPath: '',
         tags: '',
-        body: ''
+        body: '',
+        show: {
+          info: false,
+          json: false
+        }
+      }
+    },
+    ready () {
+      // Hide footer
+      document.querySelector('.footer').style.display = 'none'
+    },
+    methods: {
+      setShow (type) {
+        this.show[type] = !this.show[type]
       }
     },
     components: {
@@ -93,16 +119,46 @@
     padding: 20px;
     width: calc(100% - 40px);
     float:left;
-    height: 84vh;
+    height: 82vh;
+  }
+
+  .link-see-info {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ededed;
+
+    & > .txt {
+      font-size: 12px;
+    }
+
+    & > .icon {
+      font-size: 14px;
+      margin-left: 10px;
+      margin-top: 1px;
+      transform: rotate(90deg);
+
+      &.-up {
+        margin-top: -1px;
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  .see-info {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+
+    &.-open {
+      opacity: 1;
+      visibility: visible;
+      display: block;
+    }
   }
 
   .writer {
     background-color: #fff;
     overflow-y: auto;
-  }
-
-  .txt-info {
-
   }
 
   .box-field {
