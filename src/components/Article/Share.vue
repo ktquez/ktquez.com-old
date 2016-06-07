@@ -65,7 +65,7 @@
           display: 'popup',
           name: vm.currentPost.title,
           link: vm.currentPost.link,
-          picture: vm.$http.options.root + '/static/img/posts/' + vm.currentPost.picture,
+          picture: vm.$http.options.root + '/static/img/posts/' + vm.currentPost.picture.img,
           caption: 'Alan Albuquerque - ktquez',
           description: vm.currentPost.description
         })
