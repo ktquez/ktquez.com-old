@@ -2,7 +2,9 @@
   <div>
     <div class="fullX">      
       <top></top>
-      <social></social>
+      <div class="social">
+        <icon-social v-for="social in socials" :social="social"></icon-social>
+      </div>
       <router-view transition="load" transition-mode="out-in"></router-view>
       <div class="loading"></div>
       <foo></foo>
@@ -16,7 +18,7 @@
 
 <script>
   import Top from './Common/Header/index'
-  import Social from './Common/Social'
+  import IconSocial from './Common/Social'
   import Foo from './Common/Footer/index'
   import MenuMobile from './Common/NavMobile'
   import Search from './Common/Search'
@@ -25,10 +27,26 @@
   import store from '../vuex/store'
 
   export default {
+    data () {
+      return {
+        socials: [
+          {
+            href: 'https://twitter.com/ktquez',
+            title: 'Follow me on Twitter',
+            name: 'twitter'
+          },
+          {
+            href: 'https://github.com/ktquez',
+            title: 'My contributions! Here I share experiences and ideas',
+            name: 'github'
+          }
+        ]
+      }
+    },
     components: {
       Top,
       Hamburger,
-      Social,
+      IconSocial,
       Foo,
       ScrollTop,
       MenuMobile,
@@ -169,6 +187,22 @@
 
   .margin-section {
     margin-top: 50px;
+  }
+
+  .social {
+    position: fixed;
+    top: 90px;
+    right: 10px;
+    width: 30px;
+    height: 100px;
+    z-index: 5;
+    
+    &.-fixed { position: fixed; }
+
+    & > .icon {
+      margin-bottom: 14px;
+      float:left;
+    }
   }
 
 </style>
