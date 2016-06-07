@@ -17,7 +17,7 @@
           reload: true,
           config () {
             this.page.identifier = vm.$parent.$route.path
-            this.page.url = vm.$http.options.root + vm.$parent.$route.path
+            this.page.url = vm.$el.baseURI
           }
         })
         return
