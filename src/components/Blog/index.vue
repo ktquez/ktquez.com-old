@@ -50,7 +50,8 @@
         let posts = vm.getPosts
         vm.paginate.page = Number(vm.$route.params.page) || 1
         vm.paginate.total = posts.length
-        vm.paginate.totalPages = Math.round((vm.paginate.total / vm.paginate.perPage) + 0.49)
+        // vm.paginate.totalPages = Math.round((vm.paginate.total / vm.paginate.perPage) + 0.49)
+        vm.paginate.totalPages = Math.ceil(vm.paginate.total / vm.paginate.perPage)
         if (vm.paginate.page > vm.paginate.totalPages) window.location.href = '/blog'
         return posts.slice((vm.paginate.page - 1) * vm.paginate.perPage, vm.paginate.page * vm.paginate.perPage)
       },
