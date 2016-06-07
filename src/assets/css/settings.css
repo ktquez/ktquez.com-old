@@ -1,0 +1,23 @@
+:root {
+
+  /* FONTS*/
+  --font: Raleway, Calibri, 'trebuchet MS';
+  --font-title: 'Varela Round', Calibri, Arial;
+  
+  /* BACKGROUNDS */
+  --bg-body: #f2f2f2;
+
+  /* COLORS */
+  --color-primary: #4ac6b7;
+  --color-second: #ed7196;
+  --color-text: #444;
+  --color-text-light: #999;
+
+  /* MEDIA QUERIES */
+  @custom-media --medium-viewport (min-width: 640px) and (max-width: 1024px);  
+
+  /* COMPONENTS */
+  /* HEADER */
+  --bg-header: #ededed;
+
+}
