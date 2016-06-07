@@ -39,15 +39,10 @@
 </script>
 
 <style lang="postcss">
+
   @import "../assets/css/noDoubt.css";
   @import "../assets/css/fonts.css";
-  
-  :root {
-    --bg-body: #f2f2f2;
-    --font: Raleway, Calibri, 'trebuchet MS';
-    --font-title: 'Varela Round', Calibri, Arial;
-    --link: #4ac6b7;
-  }
+  @import "../assets/css/settings.css";
 
   body {
     font-family: var(--font);
@@ -57,7 +52,7 @@
   }
 
   code {
-    color: #f2f2f2;
+    color: var(--bg-body);
     background: #333;
     border-radius: 4px;
   }
@@ -111,7 +106,7 @@
   }
 
   .link {
-    color: var(--link);
+    color: var(--color-default);
   }
 
   .lspacing {

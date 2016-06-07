@@ -75,6 +75,9 @@
 </script>
 
 <style lang="postcss" scoped>
+
+  @import "../../assets/css/settings";
+
   .txt-invite {
     font-size: 12px;
   }
@@ -88,12 +91,12 @@
 
     & > .fb,
     & > .tw {
-      fill: #ccc;
+      fill: var(--color-light);
     }
 
     &:hover > .fb,
     &:hover > .tw {
-      fill: #4ac6b7;
+      fill: var(--color-default);
     }
   }
 

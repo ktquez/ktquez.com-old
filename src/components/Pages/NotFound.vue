@@ -18,12 +18,15 @@
 </script>
 
 <style lang="postcss" scoped>
+
+  @import '../../assets/css/settings';
+
   .notFound {
     height: 75vh;
     
     & .title {
       font-size: 120px;
-      color: #333;
+      color: var(--color-text);
     }
 
     & .link {

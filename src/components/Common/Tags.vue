@@ -13,6 +13,9 @@
 </script>
 
 <style lang="postcss" scoped>
+
+  @import "../../assets/css/settings";
+
   .tag {
     margin-right: 10px;
     margin-bottom: 10px;
@@ -20,8 +23,8 @@
     float: left;
     font-size: 12px;
     text-transform: uppercase;
-    border: 1px solid #4AC6B7;
+    border: 1px solid var(--color-default);
     border-radius: 350px;
-    color: #4AC6B7;
+    color: var(--color-default);
   }
 </style>

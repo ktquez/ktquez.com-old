@@ -13,9 +13,8 @@
 </script>
 
 <style lang="postcss">
-  :root {
-    --color: #ddd;
-  }
+  
+  @import "../../assets/css/settings";
 
   .separate {
     float:left;
@@ -26,7 +25,7 @@
       float: left;
       width: 50px;
       height: 1px;
-      background-color: var(--color);
+      background-color: color(var(--color-light) a(60%));
       margin-top: 7px;  
       margin-right: 20px;    
     }
@@ -40,7 +39,7 @@
       float: left;      
       width: 16px;
       height: 16px;
-      background-color: var(--color);
+      background-color: color(var(--color-light) a(60%));
       position: relative;
       border-radius: 50%;
       z-index: 4;

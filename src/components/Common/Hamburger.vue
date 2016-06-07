@@ -20,6 +20,9 @@
 </script>
 
 <style lang="postcss" scoped>
+  
+  @import "../../assets/css/settings";
+
   .hamburger {
     width: 30px;
     height: 20px;
@@ -53,7 +56,7 @@
     &:hover > .inner, 
     &:hover > .inner:before,
     &:hover > .inner:after{
-      background-color: #4ac6b7;
+      background-color: var(--color-default);
     }
     
     & > .inner,

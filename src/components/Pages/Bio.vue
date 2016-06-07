@@ -147,13 +147,15 @@
 </script>
 
 <style lang="postcss" scoped>
+
+  @import '../../assets/css/settings';
   
   .content-page .title {
     margin-top: 40px;
   }
 
   .caption {
-    color: #999;
+    color: var(--color-text-light);
     font-size: 12px;
     margin-top: 10px;
   }

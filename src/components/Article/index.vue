@@ -143,10 +143,8 @@
 </script>
 
 <style lang="postcss" scoped>
-  :root {
-    --border-color: #e8e8e8;
-    @custom-media --small-viewport (max-width: 480px);     
-  }
+  
+  @import "../../assets/css/settings";
   
   .title.-post { font-size: 45px; }
   
@@ -156,20 +154,20 @@
     padding-top: 30px;
     padding-bottom: 20px;
     margin-bottom: 40px;
-    border-top: 1px solid var(--border-color); 
-    border-bottom: 1px solid var(--border-color); 
+    border-top: var(--border-light); 
+    border-bottom: var(--border-light); 
   }
 
   .comments {
     margin-top: 30px;
     padding-top: 50px;
-    border-top: 1px solid var(--border-color);
+    border-top: var(--border-light);
   }
 
   .author {
     margin-right: 20px;
     width: calc(100% - 20px);
-    border-right: 1px solid var(--border-color);  
+    border-right: var(--border-light);  
 
     & .title {
       color: #333;
@@ -200,7 +198,7 @@
       padding-bottom: 30px;      
       width: 100%;      
       border-right: none;
-      border-bottom: 1px solid var(--border-color);      
+      border-bottom: var(--border-light);      
 
       & .nickname,
       & .title {

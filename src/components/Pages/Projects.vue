@@ -99,13 +99,16 @@
 </script>
 
 <style lang="postcss" scoped>
+
+  @import '../../assets/css/settings';
+
   .list > .item{
     padding: 20px 0;
     width: 100%;
   }
 
   .list > .item:not(:last-child){
-    border-bottom: 1px solid #ddd;
+    border-bottom: var(--border-default);
   }
 
   .margin-section {

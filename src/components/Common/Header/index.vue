@@ -31,15 +31,13 @@
 
 <style lang="postcss" scoped>
   
-  :root {
-    @custom-media --medium-viewport (min-width: 640px) and (max-width: 1024px);     
-  }
+  @import "../../../assets/css/settings.css";
 
   .header{
     height: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #ededed;
+    background-color: var(--bg-header);
   }
 
   .navbar-header {
@@ -56,7 +54,7 @@
     padding: 20px;
 
     &:hover {
-      color: #4ac6b7;
+      color: var(--color-default);
     }
   }
 

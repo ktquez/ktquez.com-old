@@ -68,6 +68,9 @@
 </script>
 
 <style lang="postcss" scoped>
+
+  @import "../../assets/css/settings.css";
+
   .box-search {
     background-color: #fff;
     box-shadow: -15px 0 35px -10px #ddd;
@@ -107,7 +110,7 @@
   .box-field .txt, 
   .no-results {
     font-size: 11px;
-    color: #666;
+    color: var(--color-text);
   }
 
   .result {
@@ -120,12 +123,16 @@
       padding-bottom: 15px;
       border-bottom: 1px dotted #eee;
 
+      &:last-child {
+        border: none;
+      }
+
       &:hover > .link {
-        color: #ED7196;
+        color: var(--color-second);
       }
 
       & > .link {
-        color: #666;
+        color: var(--color-text);
       }
     }
     
@@ -135,7 +142,7 @@
 
     & .desc {
       font-size: 12px;
-      color: #999;
+      color: var(--color-text-light);
     }
   }
 

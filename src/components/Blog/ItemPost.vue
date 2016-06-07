@@ -42,9 +42,7 @@
 
 <style lang="postcss" scoped>
 
-  :root {
-    --green: #4ac6b7;
-  }
+  @import "../../assets/css/settings";
 
   .article {
     margin: 50px 0;
@@ -69,7 +67,7 @@
   }
 
   .see-more {
-    border: 1px solid var(--green);
+    border: 1px solid var(--color-default);
     padding: 8px 12px 7px;
     border-radius: 60px;
     float:left;
@@ -77,7 +75,7 @@
     font-size: 12px;
 
     &:hover {
-      background-color: var(--green);
+      background-color: var(--color-default);
       color: #fff;
     }
   }

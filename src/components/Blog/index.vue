@@ -99,6 +99,9 @@
 </script>
 
 <style lang="postcss" scoped>
+
+  @import "../../assets/css/settings";
+
   .home {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -116,7 +119,7 @@
       margin-right: 12px;
       font-size: 12px;
       font-weight: bold;
-      background: #4ac6b7;
+      background: var(--color-default);
       color: #fff;
       border-radius: 20px;
 
@@ -145,7 +148,7 @@
       }
 
       &:hover {
-        background: #ED7196;
+        background: var(--color-second);
       }
     }
   }

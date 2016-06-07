@@ -8,16 +8,25 @@
   --bg-body: #f2f2f2;
 
   /* COLORS */
-  --color-primary: #4ac6b7;
+  --color-default: #4ac6b7;
   --color-second: #ed7196;
   --color-text: #444;
   --color-text-light: #999;
+  --color-light: #ccc;
+
+  /* BORDERS */
+  --border-default: 1px solid #ddd;
+  --border-light: 1px solid #e8e8e8;
 
   /* MEDIA QUERIES */
+  @custom-media --small-viewport (max-width: 480px);
   @custom-media --medium-viewport (min-width: 640px) and (max-width: 1024px);  
 
   /* COMPONENTS */
   /* HEADER */
   --bg-header: #ededed;
+
+  /* CONTACT */
+  --bg-contact: url('../../assets/recife-ktquez1.png');
 
 }

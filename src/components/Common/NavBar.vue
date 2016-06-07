@@ -26,9 +26,7 @@
 
 <style lang="postcss" scoped>
   
-  :root {
-    --color-link: #4ac6b7;
-  }
+  @import "../../assets/css/settings";
 
   .list-navbar > .item {
     display:inline;
@@ -48,7 +46,7 @@
     position: relative;
 
     &.-active {
-      color: var(--color-link); 
+      color: var(--color-default); 
       
       &:before {
         left: -10px;
@@ -76,7 +74,7 @@
 
     &:before,
     &:after {
-      color: var(--color-link);
+      color: var(--color-default);
       position: absolute;
       opacity: 0;
       top: 0;
@@ -84,7 +82,7 @@
     }
 
     &:hover {
-      color: var(--color-link);
+      color: var(--color-default);
 
       &:hover:before {
         opacity: 1;
