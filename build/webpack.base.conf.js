@@ -1,6 +1,7 @@
 var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
+var webpack = require('webpack')
 var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
@@ -82,5 +83,10 @@ module.exports = {
     postcss: [require('postcss-cssnext')],
     autoprefixer: false
     // loaders: utils.cssLoaders()
-  }
+  },
+  postcss: [
+    require('postcss-import')({
+      addDependencyTo: webpack,
+    })
+  ]
 }
