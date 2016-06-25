@@ -63,9 +63,9 @@
 
 <style lang="postcss">
 
-  @import "../assets/css/noDoubt.css";
-  @import "../assets/css/fonts.css";
-  @import "../assets/css/settings.css";
+  @import "~../assets/css/noDoubt.css";
+  @import "~../assets/css/fonts.css";
+  @import "~../assets/css/settings.css";
 
   body {
     font-family: var(--font);

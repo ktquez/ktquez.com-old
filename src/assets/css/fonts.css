@@ -18,11 +18,11 @@
   font-family: 'ktquez';
   font-weight: normal;
   font-style: normal;
-  src:  url('../assets/font-icon/ktquez.eot?yfetij');
-  src:  url('../assets/font-icon/ktquez.eot?yfetij#iefix') format('embedded-opentype'), 
-  url('../assets/font-icon/ktquez.ttf?yfetij') format('truetype'), 
-  url('../assets/font-icon/ktquez.woff?yfetij') format('woff'), 
-  url('../assets/font-icon/ktquez.svg?yfetij#ktquez') format('svg');
+  src:  url('../font-icon/ktquez.eot?yfetij');
+  src:  url('../font-icon/ktquez.eot?yfetij#iefix') format('embedded-opentype'), 
+  url('../font-icon/ktquez.ttf?yfetij') format('truetype'), 
+  url('../font-icon/ktquez.woff?yfetij') format('woff'), 
+  url('../font-icon/ktquez.svg?yfetij#ktquez') format('svg');
 }
 
 .icon {
