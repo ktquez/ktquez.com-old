@@ -14,7 +14,7 @@
 
 <style lang="postcss">
   
-  @import "../../assets/css/settings";
+  @import "../../assets/css/settings.css";
 
   .separate {
     float:left;
@@ -25,7 +25,7 @@
       float: left;
       width: 50px;
       height: 1px;
-      background-color: color(var(--color-light) a(60%));
+      background-color: color(#ccc a(60%));
       margin-top: 7px;  
       margin-right: 20px;    
     }
@@ -39,7 +39,7 @@
       float: left;      
       width: 16px;
       height: 16px;
-      background-color: color(var(--color-light) a(60%));
+      background-color: color(#ccc a(60%));
       position: relative;
       border-radius: 50%;
       z-index: 4;

@@ -26,7 +26,7 @@
 
 <style lang="postcss" scoped>
   
-  @import "../../assets/css/settings";
+  @import "../../assets/css/settings.css";
 
   .list-navbar > .item {
     display:inline;

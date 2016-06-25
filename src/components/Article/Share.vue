@@ -76,7 +76,7 @@
 
 <style lang="postcss" scoped>
 
-  @import "../../assets/css/settings";
+  @import "../../assets/css/settings.css";
 
   .txt-invite {
     font-size: 12px;

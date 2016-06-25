@@ -42,7 +42,7 @@
 
 <style lang="postcss" scoped>
 
-  @import "../../assets/css/settings";
+  @import "../../assets/css/settings.css";
 
   .article {
     margin: 50px 0;

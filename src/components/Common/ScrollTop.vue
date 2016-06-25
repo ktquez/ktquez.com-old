@@ -50,7 +50,7 @@
 
 <style lang="postcss" scoped>
 
-  @import "../../assets/css/settings";
+  @import "../../assets/css/settings.css";
 
   .back-scrolltop {
     border-radius: 50%;
@@ -77,9 +77,9 @@
 
   @keyframes fire {
     from { box-shadow: 20px 0 5px -10px var(--color-default); }
-    40% { box-shadow: 15px 0 5px -10px color(var(--color-default) blackness(30%)); }
+    40% { box-shadow: 15px 0 5px -10px color(#4ac6b7 blackness(30%)); }
     60% { box-shadow: 20px 0 5px -10px var(--color-default); }
-    80% { box-shadow: 15px 0 5px -10px color(var(--color-default) blackness(30%)); }
+    80% { box-shadow: 15px 0 5px -10px color(#4ac6b7 blackness(30%)); }
     to { box-shadow: 20px 0 5px -10px var(--color-default); }
   }
 </style>

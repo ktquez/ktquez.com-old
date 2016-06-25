@@ -103,7 +103,7 @@
 
 <style lang="postcss" scoped>
 
-  @import '../../assets/css/settings';
+  @import '../../assets/css/settings.css';
 
   .list > .item{
     padding: 20px 0;

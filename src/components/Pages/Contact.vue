@@ -38,7 +38,7 @@
 
 <style lang="postcss" scoped>
   
-  @import '../../assets/css/settings';
+  @import '../../assets/css/settings.css';
 
   .bg-recife {
     background-image: var(--bg-contact);

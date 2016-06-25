@@ -19,7 +19,7 @@
 
 <style lang="postcss" scoped>
 
-  @import '../../assets/css/settings';
+  @import '../../assets/css/settings.css';
 
   .notFound {
     height: 75vh;

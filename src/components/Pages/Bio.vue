@@ -148,7 +148,7 @@
 
 <style lang="postcss" scoped>
 
-  @import '../../assets/css/settings';
+  @import '../../assets/css/settings.css';
   
   .content-page .title {
     margin-top: 40px;

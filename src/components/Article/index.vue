@@ -144,7 +144,7 @@
 
 <style lang="postcss" scoped>
   
-  @import "../../assets/css/settings";
+  @import "../../assets/css/settings.css";
   
   .title.-post { font-size: 45px; }
   

@@ -101,7 +101,7 @@
 
 <style lang="postcss" scoped>
 
-  @import "../../assets/css/settings";
+  @import "../../assets/css/settings.css";
 
   .home {
     padding-top: 20px;

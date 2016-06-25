@@ -21,7 +21,7 @@
 
 <style lang="postcss" scoped>
   
-  @import "../../assets/css/settings";
+  @import "../../assets/css/settings.css";
 
   .hamburger {
     width: 30px;
