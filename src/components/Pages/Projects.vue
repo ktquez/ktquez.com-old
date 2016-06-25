@@ -47,8 +47,11 @@
           <h2 class="fullX title">WEBSITES E APLICAÇÕES</h2>  
           <ul class="fullX txt list">
             <li class="item">
+              <a class="link" title="Não sou especialista na área, mas faço uns layouts legais" target="_blank" href="https://www.behance.net/alanktquez">
+                <b>Behance (Portifólio)</b>
+              </a>
               <p class="description">
-                EM BREVE
+                Layouts e desenvolvimento que faço para alguns projetos.
               </p>
             </li>
           </ul>        
