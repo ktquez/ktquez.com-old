@@ -11,13 +11,13 @@
       </main>
       <div class="fullX">
         <div class="paginate">
-          <a role="button" class="btn-paginate prev fl fade-fast" v-if="news" v-link="{ name: 'paginate', params: { page: this.paginate.page - 1 } }">
-            <span class="icon">&#xe907;</span>
-            <span class="txt"></span>NOVOS POSTS
+          <a role="button" class="btn-paginate prev fr fade-fast" v-if="news" v-link="{ name: 'paginate', params: { page: this.paginate.page - 1 } }">
+            <span class="txt fl">NOVOS POSTS</span>
+            <span class="icon">&#xe90b;</span>
           </a>
-          <a role="button" class="btn-paginate next fr fade-fast" v-if="older" v-link="{ name: 'paginate', params: { page: this.paginate.page + 1 } }">
-            <span class="icon">&#xe90a;</span>
-            <span class="txt">POSTS ANTIGOS</span>
+          <a role="button" class="btn-paginate next fl fade-fast" v-if="older" v-link="{ name: 'paginate', params: { page: this.paginate.page + 1 } }">
+            <span class="txt fr">POSTS ANTIGOS</span>
+            <span class="icon">&#xe908;</span>
           </a>
         </div>         
       </div>
@@ -132,12 +132,12 @@
 
       &.prev > .icon {
         float: left;
-        margin-right: 5px;
+        margin-left: 5px;
       }
 
       &.next > .icon {
         float: right;
-        margin-left: 5px;
+        margin-right: 5px;
       }
 
       &.-hide {

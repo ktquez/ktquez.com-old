@@ -1,6 +1,6 @@
 <template>
   <div class="box-search" :class="{ '-open': isSearch }">
-    <button type="button" role="button" class="icon close" @click="setSearch">&#xe902;</button>
+    <button type="button" role="button" class="icon close" @click="setSearch">&#xe903;</button>
     <div class="fullX box-field">
       <label for="term" class="txt fl">O que você procura?</label>
       <input type="text" id="term" class="input fl" autofocus name="term" @input="search" placeholder="pesquise aqui">        

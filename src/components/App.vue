@@ -39,6 +39,11 @@
             href: 'https://github.com/ktquez',
             title: 'My contributions! Here I share experiences and ideas',
             name: 'github'
+          },
+          {
+            href: 'https://www.behance.net/alanktquez',
+            title: 'I"m no expert, but I do cool stuff',
+            name: 'behance'
           }
         ]
       }

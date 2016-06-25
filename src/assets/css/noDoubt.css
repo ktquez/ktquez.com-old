@@ -323,3 +323,15 @@ input[type="password"] {
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
 }
+
+
+/* ICONS
+-------------------------------------------------------------- */
+.icon-twitter:before { content: '\e910'; }
+.icon-twitter:hover { color: #89c9fa; }
+
+.icon-github:before { content: '\e905'; }
+.icon-github:hover { color: #555; }
+
+.icon-behance:before { content: '\e900'; }
+.icon-behance:hover { color: #555; }

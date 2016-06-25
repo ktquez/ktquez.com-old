@@ -4,7 +4,7 @@
       <div class="writer">
         <button type="button" class="link-see-info fullX link" @click="setShow('info')">
           <span class="txt fl">PREENCHER INFORMAÇÕES</span>
-          <span class="icon" :class="{ '-up': show.info }">&#xe90a;</span>
+          <span class="icon" :class="{ '-up': show.info }">&#xe90b;</span>
         </button>
         <div class="see-info fade-fast" :class="{'-open': show.info }">
           <div class="box-field">
@@ -25,7 +25,7 @@
         </div>
         <button type="button" class="link-see-info fullX link" @click="setShow('json')">
           <span class="txt fl">VER JSON INFORMAÇÕES</span>
-          <span class="icon" :class="{ '-up': show.json }">&#xe90a;</span>
+          <span class="icon" :class="{ '-up': show.json }">&#xe90b;</span>
         </button>
         <div class="see-info fade-fast" :class="{'-open': show.json }">
           <pre class="fullX">

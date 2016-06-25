@@ -1,7 +1,7 @@
 <template>
   <small class="fullX tac">
     &copy; {{ year }} - Build with 
-    <span class="icon heart">&#xe905;</span>
+    <span class="icon heart">&#xe906;</span>
     <a class="link fade-half" target="blank" href="https://vuejs.org/" title="Vue.js - Reactive Components for Modern Web Interfaces">
       Vue.js 
     </a>

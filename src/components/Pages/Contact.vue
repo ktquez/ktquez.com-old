@@ -2,7 +2,7 @@
   <main class="fullX main" role="main">
     <div class="fullX bg-recife">
       <div class="info-bg abs centerX">
-        <span class="icon">&#xe908;</span>
+        <span class="icon">&#xe909;</span>
         <span class="txt title">RECIFE</span>
       </div>
     </div>

@@ -8,7 +8,7 @@
     <div class="c-t10 c-gg6 cpl dnone-m view-t">
       <menu :class="['navbar-header']"></menu>
     </div>   
-    <button role="button" class="icon search" @click="setSearch">&#xe90b;</button>    
+    <button role="button" class="icon search" @click="setSearch">&#xe90c;</button>    
   </header>   
 </template>
 

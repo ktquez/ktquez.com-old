@@ -1,5 +1,5 @@
 <template>
-  <span class="back-scrolltop icon" @click="fire">&#xe907;</span>
+  <span class="back-scrolltop icon" @click="fire">&#xe908;</span>
 </template>
 
 <script>

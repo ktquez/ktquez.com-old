@@ -13,12 +13,4 @@
   }
 </script>
 
-<style lang="postcss">
-
-  .icon-twitter:before { content: '\e90f'; }
-  .icon-twitter:hover { color: #89c9fa; }
-  
-  .icon-github:before { content: '\e904'; }
-  .icon-github:hover { color: #555; }
-
-</style>
+<style lang="postcss"></style>
