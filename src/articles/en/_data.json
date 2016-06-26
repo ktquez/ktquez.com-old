@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "It's my first article",
+    "slug": "its-my-first-article",
+    "picture": {
+      "img": "slug-image",
+      "caption": "text-here" 
+    },
+    "date": "Sat Jun 25 2016 23:47:37 GMT-0300 (Hora oficial do Brasil)",
+    "tags": "tag1 tag2 tag3",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+  }
+]
