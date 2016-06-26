@@ -34,11 +34,11 @@
               </p>
             </li>
             <li class="item">
-              <a class="link" title="Uma quase vídeo documentação em PT-BR da linguagem web mais usada no mundo (PHP)" target="_blank" href="https://github.com/ktquez/videophp.net">
+              <a class="link" title="Uma quase vídeo documentação em PT-BR da linguagem web mais usada no mundo (PHP)" target="_blank" href="https://github.com/video-php">
                 <b>videophp.net (coming soon)</b>
               </a>
               <p class="description">
-                Uma quase vídeo documentação em PT-BR da linguagem web mais usada no mundo (PHP)
+                Plataforma de séries em vídeos sobre a linguagem de programação mais utilizada na web
               </p>
             </li>
           </ul>
