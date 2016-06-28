@@ -4,6 +4,8 @@
 
 <script>
   import marked from 'marked'
+  import hljs from 'highlight.js'
+
   export default {
     props: {
       post: {
@@ -14,7 +16,7 @@
     compiled () {
       marked.setOptions({
         highlight: (code, lang) => {
-          return window.hljs.highlightAuto(code, [lang]).value
+          return hljs.highlightAuto(code, [lang]).value
         }
       })
     },

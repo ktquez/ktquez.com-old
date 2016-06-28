@@ -63,10 +63,12 @@
 
 <style lang="postcss">
 
+  @import "~normalize.css/normalize.css";
+  @import "~highlight.js/styles/hybrid.css";
   @import "~../assets/css/noDoubt.css";
   @import "~../assets/css/fonts.css";
   @import "~../assets/css/settings.css";
-
+  
   body {
     font-family: var(--font);
     background-color: var(--bg-body);
