@@ -25,6 +25,14 @@
                 Cool and powerful effect to select fields. Javascript vanilla and ~2kb gzipped
               </p>
             </li>
+             <li class="item">
+              <a class="link" title="Manager the meta information of the head tag, a simple and easy way" target="_blank" href="https://github.com/ktquez/vue-head">
+                <b>Vue-head</b>
+              </a>
+              <p class="description">
+                Manager the meta information of the head tag, a simple and easy way
+              </p>
+            </li>
             <li class="item">
               <a class="link" title="Tema Wordpress Ktquez" target="_blank" href="https://github.com/ktquez/wp-theme-ktquez">
                 <b>wp-theme-ktquez</b>
