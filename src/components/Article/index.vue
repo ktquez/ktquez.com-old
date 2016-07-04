@@ -105,13 +105,12 @@
     route: {
       activate (transition) {
         let vm = this
-        let slug = transition.to.params.slug
         const setCurrent = (posts) => {
-          let current = posts.filter((item) => {
-            return item.slug === slug
+          let current = posts.filter((post) => {
+            return post.slug === transition.to.params.slug
           })
           // Add full url
-          current[0].link = vm.$http.options.root + vm.$route.path
+          current[0].link = vm.$el.baseURI
           vm.setCurrentPost(current[0])
         }
         if (vm.getPosts.length) {
@@ -120,9 +119,11 @@
           return
         }
         vm.$http.get('static/articles/' + vm.getLang + '/_data.json').then((response) => {
-          vm.setPosts(response.data)
+          vm.setPosts(response.data.reverse())
           setCurrent(vm.getPosts)
           transition.next()
+        }).catch((response) => {
+          transition.redirect('/404')
         })
       },
       data (transition) {
