@@ -27,6 +27,9 @@
 </script>
 
 <style lang="postcss">
+
+  @import "../../assets/css/settings.css";
+
   .post {
     
     & h1, 
@@ -36,7 +39,14 @@
     & h5, 
     & h6 {
       color: #000;
+      float: left;
       font-weight: bold;
+      font-family: var(--font);
+      margin-top: 20px;
+    }
+
+    & strong {
+      font-family: var(--font);
     }
 
     & img {
@@ -110,8 +120,12 @@
       width: calc(100% - 10px);
     }
 
-    & strong {
-      color: #333;
+    & ul {
+      margin-top: 20px;
+    }
+
+    & li {
+      margin-bottom: 10px;
     }
 
     & blockquote p{
