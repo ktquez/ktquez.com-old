@@ -120,6 +120,7 @@
     width: calc(100% - 40px);
     float:left;
     height: 82vh;
+    overflow: auto;
   }
 
   .link-see-info {
