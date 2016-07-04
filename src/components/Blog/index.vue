@@ -37,7 +37,7 @@
       return {
         paginate: {
           page: 1,
-          perPage: 2,
+          perPage: 8,
           totalPages: 0,
           total: 0
         }
@@ -81,7 +81,7 @@
         }
         // In another way get posts by ajax
         vm.$http.get('static/articles/' + vm.getLang + '/_data.json').then((response) => {
-          vm.setPosts(response.data)
+          vm.setPosts(response.data.reverse())
           transition.next()
         }).catch((response) => {
           transition.redirect('/404')
