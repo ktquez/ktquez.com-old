@@ -25,12 +25,8 @@
             Com mais ênfase como Web Developer, me aventurei no boom das compras coletivas lançando um aplicação desenvolvida por mim, com checkout, envio email marketing, gerenciamento de leed, mídias sociais e etc. O Site ficou no ar durante um ano e meio, aprendi bastante nesse período, principalmente na lógica de negócio e na resolução de problemas críticos. =)
           </p>
           
-          <p class="txt">
-            De lá para cá, me dedico somente à comunidade web e trabalhos Freelancer/Remoto, sou bastante compromissado, principalmente por já ter passado pelo período de adaptação e ter desenvolvido uma disciplina no trabalho home Office, dando ainda mais produtividade.
-          </p>
-          
           <p class="txt">          
-            Atualmente (com 28 anos) me encontro disponível para trabalho remoto utilizando as tecnologias PHP e Javascript, onde meu foco está virado com carinho nesse momento, aprendendo muito e passando o máximo possível de conhecimento para a comunidade.
+            Atualmente (com 28 anos) com uma experiência de aproximadamente 5 anos com desenvolvimento web, me encontro disponível para trabalho remoto utilizando as tecnologias PHP e Javascript, onde meu foco está virado com carinho nesse momento, aprendendo muito e passando o máximo possível de conhecimento para a comunidade.
           </p>            
 
           <h2 class="fullX title">NO QUE ESTOU FOCADO</h2>
@@ -104,6 +100,7 @@
           'Webpack e Gulp',
           'PostCSS / NextCSS',
           'GIT',
+          'SEO',
           'Web performance',
           'Clean code'
         ],
@@ -114,7 +111,6 @@
           'SVG',
           'AngularJS',
           'React',
-          'SEO',
           'UX / UI'
         ]
       }
