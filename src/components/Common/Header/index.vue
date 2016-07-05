@@ -31,7 +31,11 @@
 
 <style lang="postcss" scoped>
   
-  @import "../../../assets/css/settings.css";
+  :root {
+    --bg-header: #ededed;
+    --color-default: #4ac6b7;
+    @custom-media --medium-viewport (min-width: 640px) and (max-width: 1024px);  
+  }
 
   .header{
     height: 50px;

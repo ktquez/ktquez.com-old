@@ -26,7 +26,9 @@
 
 <style lang="postcss" scoped>
   
-  @import "../../assets/css/settings.css";
+  :root {
+    --color-default: #4ac6b7;
+  }
 
   .list-navbar > .item {
     display:inline;

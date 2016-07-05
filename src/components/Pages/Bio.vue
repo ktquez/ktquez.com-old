@@ -144,8 +144,10 @@
 
 <style lang="postcss" scoped>
 
-  @import '../../assets/css/settings.css';
-  
+  :root {
+    --color-text-light: #999;
+  }
+
   .content-page .title {
     margin-top: 40px;
   }

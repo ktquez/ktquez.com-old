@@ -28,7 +28,9 @@
 
 <style lang="postcss">
 
-  @import "../../assets/css/settings.css";
+  :root {
+    --font: Raleway, Calibri, 'trebuchet MS';
+  }
 
   .post {
     

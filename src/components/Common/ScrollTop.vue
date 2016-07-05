@@ -50,8 +50,10 @@
 
 <style lang="postcss" scoped>
 
-  @import "../../assets/css/settings.css";
-
+  :root {
+    --color-default: #4ac6b7;
+  }
+  
   .back-scrolltop {
     border-radius: 50%;
     background: color(white alpha(50%));

@@ -101,7 +101,10 @@
 
 <style lang="postcss" scoped>
 
-  @import "../../assets/css/settings.css";
+  :root {
+    --color-default: #4ac6b7;
+    --color-second: #ed7196;
+  }
 
   .home {
     padding-top: 20px;

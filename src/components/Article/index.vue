@@ -145,7 +145,10 @@
 
 <style lang="postcss" scoped>
   
-  @import "../../assets/css/settings.css";
+  :root {
+    @custom-media --small-viewport (max-width: 480px);
+    --border-light: 1px solid #e8e8e8;
+  }
   
   .title.-post { font-size: 45px; }
   
@@ -199,7 +202,7 @@
       padding-bottom: 30px;      
       width: 100%;      
       border-right: none;
-      border-bottom: var(--border-light);      
+      border-bottom: var(--border-light);  
 
       & .nickname,
       & .title {

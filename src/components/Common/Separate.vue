@@ -14,8 +14,6 @@
 
 <style lang="postcss">
   
-  @import "../../assets/css/settings.css";
-
   .separate {
     float:left;
     margin-top: 20px;

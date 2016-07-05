@@ -14,7 +14,9 @@
 
 <style lang="postcss" scoped>
 
-  @import "../../assets/css/settings.css";
+  :root {
+    --color-default: #4ac6b7;
+  }
 
   .tag {
     margin-right: 10px;

@@ -19,7 +19,9 @@
 
 <style lang="postcss" scoped>
 
-  @import '../../assets/css/settings.css';
+  :root {
+    --color-text: #444;
+  }
 
   .notFound {
     height: 75vh;

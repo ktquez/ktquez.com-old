@@ -21,7 +21,9 @@
 
 <style lang="postcss" scoped>
   
-  @import "../../assets/css/settings.css";
+  :root {
+    --color-default: #4ac6b7;
+  }
 
   .hamburger {
     width: 30px;

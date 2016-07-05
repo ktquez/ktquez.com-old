@@ -69,7 +69,11 @@
 
 <style lang="postcss" scoped>
 
-  @import "../../assets/css/settings.css";
+  :root {
+    --color-second: #ed7196;
+    --color-text: #444;
+    --color-text-light: #999;
+  }
 
   .box-search {
     background-color: #fff;

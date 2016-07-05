@@ -65,19 +65,19 @@
 
   @import "~normalize.css/normalize.css";
   @import "~highlight.js/styles/hybrid.css";
-  @import "../assets/css/noDoubt.css";
   @import "~../assets/css/fonts.css";
-  @import "../assets/css/settings.css";
+  @import "../assets/css/noDoubt.css";
+
   
   body {
-    font-family: var(--font);
-    background-color: var(--bg-body);
+    font-family: Raleway, Calibri, 'trebuchet MS';
+    background-color: #f2f2f2;
     overflow-x: hidden;
     overflow-y: auto;
   }
 
   code {
-    color: var(--bg-body);
+    color: #f2f2f2;
     background: #333;
     border-radius: 4px;
   }
@@ -131,7 +131,7 @@
   }
 
   .link {
-    color: var(--color-default);
+    color: #4ac6b7;
   }
 
   .lspacing {
@@ -150,11 +150,11 @@
   }
 
   .article {
-    font-family: var(--font);
+    font-family: Raleway, Calibri, 'trebuchet MS';
   }
 
   .title { 
-    font-family: var(--font-title);
+    font-family: 'Varela Round', Calibri, Arial;
     font-weight: bold; 
   }
 
@@ -169,7 +169,7 @@
     margin-top: 20px;
     padding-top: 20px;
     & > .description {
-      font-family: var(--font-article);
+      font-family: Raleway, Calibri, 'trebuchet MS';
     }
   }
 
