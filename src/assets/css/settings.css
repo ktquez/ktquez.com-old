@@ -27,6 +27,6 @@
   --bg-header: #ededed;
 
   /* CONTACT */
-  --bg-contact: url('../../assets/recife-ktquez1.png');
+  --bg-contact: '../../assets/recife-ktquez1.png';
 
 }

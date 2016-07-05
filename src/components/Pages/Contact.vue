@@ -38,10 +38,8 @@
 
 <style lang="postcss" scoped>
   
-  @import '../../assets/css/settings.css';
-
   .bg-recife {
-    background-image: var(--bg-contact);
+    background-image: url('../../assets/recife-ktquez1.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 300px;
