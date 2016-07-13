@@ -132,6 +132,17 @@
 
   .link {
     color: #4ac6b7;
+    position: relative;
+  
+    &.-line:after {
+      content: '';
+      border-bottom: 2px solid #4ac6b7;
+      padding: 5px 20px 0;
+      float: left;
+      left: 0;
+      bottom: 0;
+    }
+
   }
 
   .lspacing {
@@ -184,12 +195,15 @@
 
   .content-page .txt, 
   .article .txt {
-    margin-top: 20px;
     line-height: 1.5em;
     font-size: 17px;
     letter-spacing: .5px;    
     color: #777;
     float: left;
+  }
+
+  .content-page .txt{
+    margin-top: 20px;
   }
 
   .margin-section {

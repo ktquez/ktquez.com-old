@@ -1,6 +1,11 @@
 <template>
   <article class="fullX article" role="article">
-    <a v-link="{ name: 'article', params: { slug: post.slug }}" title="{{ post.title }}">
+    <a target="_blank" href="{{ post.external }}" title="{{ post.title }}" class="link -line" v-if="post.external">
+      <h2 class="fullX title-post title">
+        {{ post.title }}      
+      </h2>      
+    </a>
+    <a v-link="{ name: 'article', params: { slug: this.post.slug }}" title="{{ post.title }}" class="link -line" v-else>
       <h2 class="fullX title-post title">
         {{ post.title }}      
       </h2>      
@@ -12,7 +17,7 @@
     <p class="fullX lspacing txt description">
       {{ post.description }}
     </p>
-    <a class="link see-more fade-half" v-link="{ name: 'article', params: { slug: post.slug }}" title="{{ post.title }}">LER MAIS</a>
+    <!-- <a class="link see-more fade-half" v-link="{ name: 'article', params: { slug: post.slug }}" title="{{ post.title }}">LER MAIS</a> -->
   </article>    
 </template>
 
@@ -47,7 +52,17 @@
   }
   
   .article {
-    margin: 50px 0;
+    margin: 30px 0;
+
+    &:not(:last-child) {
+      padding-bottom: 50px;
+      border-bottom: 1px solid #e1e1e1;
+    }
+
+    .txt {
+      margin-top: 10px;
+    }
+
   }
 
   .title-post.title {
