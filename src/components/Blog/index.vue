@@ -45,15 +45,13 @@
     },
     computed: {
       postsByPage () {
-        const vm = this
-        if (!vm.getPosts.length) return
-        let posts = vm.getPosts
-        vm.paginate.page = Number(vm.$route.params.page) || 1
-        vm.paginate.total = posts.length
-        // vm.paginate.totalPages = Math.round((vm.paginate.total / vm.paginate.perPage) + 0.49)
-        vm.paginate.totalPages = Math.ceil(vm.paginate.total / vm.paginate.perPage)
-        if (vm.paginate.page > vm.paginate.totalPages) window.location.href = '/blog'
-        return posts.slice((vm.paginate.page - 1) * vm.paginate.perPage, vm.paginate.page * vm.paginate.perPage)
+        if (!this.getPosts.length) return
+        let posts = this.getPosts
+        this.paginate.page = Number(this.$route.params.page) || 1
+        this.paginate.total = posts.length
+        this.paginate.totalPages = Math.ceil(this.paginate.total / this.paginate.perPage)
+        if (this.paginate.page > this.paginate.totalPages) window.location.href = '/blog'
+        return posts.slice((this.paginate.page - 1) * this.paginate.perPage, this.paginate.page * this.paginate.perPage)
       },
       news () {
         return this.paginate.page !== 1 && (this.getPosts.length)
@@ -73,15 +71,14 @@
     },
     route: {
       data (transition) {
-        let vm = this
         // Check if have posts in store
-        if (vm.getPosts.length) {
+        if (this.getPosts.length) {
           transition.next()
           return
         }
         // In another way get posts by ajax
-        vm.$http.get('static/articles/' + vm.getLang + '/_data.json').then((response) => {
-          vm.setPosts(response.data.reverse())
+        this.$http.get('static/articles/' + this.getLang + '/_data.json').then((response) => {
+          this.setPosts(response.data.reverse())
           transition.next()
         }).catch((response) => {
           transition.redirect('/404')

@@ -104,32 +104,30 @@
     },
     route: {
       activate (transition) {
-        let vm = this
         const setCurrent = (posts) => {
           let current = posts.filter((post) => {
             return post.slug === transition.to.params.slug
           })
           // Add full url
-          current[0].link = vm.$el.baseURI
-          vm.setCurrentPost(current[0])
+          current[0].link = this.$el.baseURI
+          this.setCurrentPost(current[0])
         }
-        if (vm.getPosts.length) {
-          setCurrent(vm.getPosts)
+        if (this.getPosts.length) {
+          setCurrent(this.getPosts)
           transition.next()
           return
         }
-        vm.$http.get('static/articles/' + vm.getLang + '/_data.json').then((response) => {
-          vm.setPosts(response.data.reverse())
-          setCurrent(vm.getPosts)
+        this.$http.get('static/articles/' + this.getLang + '/_data.json').then((response) => {
+          this.setPosts(response.data.reverse())
+          setCurrent(this.getPosts)
           transition.next()
         }).catch((response) => {
           transition.redirect('/404')
         })
       },
       data (transition) {
-        let vm = this
         let slug = transition.to.params.slug
-        vm.$http.get('static/articles/' + vm.getLang + '/' + slug + '.md').then((response) => {
+        this.$http.get('static/articles/' + this.getLang + '/' + slug + '.md').then((response) => {
           transition.next({
             post: response.data
           })
