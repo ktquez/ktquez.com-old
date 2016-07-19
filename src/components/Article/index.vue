@@ -42,11 +42,11 @@
 </template>
 
 <script>
+  import Disqus from 'vue-disqus'
   import Separate from '../Common/Separate'
   import Share from './Share'
   import Post from './Post'
   import Tag from '../Common/Tags'
-  import Disqus from './Disqus'
   import { getPosts, getCurrentPost, getLang } from '../../vuex/getters'
   import { setPosts, setCurrentPost } from '../../vuex/actions'
   import { head } from '../../plugins/head'
