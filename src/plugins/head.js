@@ -1,12 +1,31 @@
+
 const opt = {
   compl: document.title,
   separator: '|'
 }
-
-let diff = []
-let diffTitle = {}
+const diffTitle = {}
+let els = []
 
 const util = {
+  // sh = shorthand
+  shorthand: {
+    ch: 'charset',
+    tg: 'target',
+    n: 'name',
+    he: 'http-equiv',
+    ip: 'itemprop',
+    c: 'content',
+    p: 'property',
+    sc: 'scheme',
+    r: 'rel',
+    h: 'href',
+    sz: 'sizes',
+    t: 'type',
+    s: 'src',
+    a: 'async',
+    d: 'defer',
+    i: 'inner'
+  },
   getPlace (place) {
     return document.getElementsByTagName(place)[0]
   },
@@ -14,131 +33,60 @@ const util = {
     if (!state.before) return
     document.title = state.before
   },
-  undo (states) {
-    if (!states.length) return
-    states.map(state => {
-      const place = this.getPlace(state.place || 'head')
-      ;(state.before) ? place.replaceChild(state.before, state.after) : place.removeChild(state.after)
+  undo () {
+    if (!els.length) return
+    els.map(el => {
+      el.parentElement.removeChild(el)
     })
-  },
-  /**
-   * Add state before and after of the elements
-   */
-  setStateElements (clone, el, state) {
-    state.before = clone
-    state.after = el
-    diff.push(state)
-    return
+    els = []
   },
   title (val) {
     if (!val) return
     diffTitle.before = opt.compl
     document.title = `${val.inner} ${val.separator || opt.separator} ${val.compl || opt.compl}`
   },
-  meta (objMeta) {
-    if (!objMeta) return
-    const head = this.getPlace('head')
-    Object.keys(objMeta).map(prop => {
-      const state = {}
-      let meta = objMeta[prop]
-      Object.keys(meta).map(value => {
-        // set state of elements
-        let el = head.querySelector('meta[' + prop + '="' + value + '"]') || document.createElement('meta')
-        let clone = el.cloneNode(true)
-        // Assign Content
-        el.setAttribute('content', meta[value])
-        // If exists element
-        if (el.getAttribute(prop)) {
-          this.setStateElements(clone, el, state)
+  common (arr, tag, place) {
+    if (!arr) return
+    arr.map(obj => {
+      let parent = this.getPlace(place)
+      let el = document.getElementById(obj.id) || document.createElement(tag)
+      Object.keys(obj).map(prop => {
+        let sh = (this.shorthand[prop] || prop)
+        if (sh.match(/(body|undo)/g)) return
+        if (sh === 'inner') {
+          el.textContent = obj[prop]
           return
         }
-        // If not exists element
-        el.setAttribute(prop, value)
-        head.appendChild(el)
-        state.after = el
-        diff.push(state)
+        el.setAttribute(sh, obj[prop])
       })
-    })
-  },
-  link (objLink) {
-    if (!objLink) return
-    const head = this.getPlace('head')
-    Object.keys(objLink).map(rel => {
-      const state = {}
-      let el = head.querySelector(`link[rel="${rel}"]`) || document.createElement('link')
-      let props = objLink[rel]
-      let clone = el.cloneNode(true)
-      // Assign for each the props
-      Object.keys(props).map(prop => {
-        el.setAttribute(prop, props[prop])
-      })
-      // If exists element
-      if (el.getAttribute('rel')) {
-        this.setStateElements(clone, el, state)
-        return
-      }
-      // If not exists element
-      el.setAttribute('rel', rel)
-      head.appendChild(el)
-      state.after = el
-      diff.push(state)
-    })
-  },
-  script (objScript) {
-    if (!objScript) return
-    console.log(objScript)
-    const tag = (objScript.body) ? 'body' : 'head'
-    const place = this.getPlace(tag)
-    objScript.sources.map(src => {
-      const state = {}
-      let el = document.getElementById(src.id) || document.createElement('script')
-      let clone = el.cloneNode(true)
-      // If exists element and not fixed
-      if (el.getAttribute('id')) {
-        if (objScript.fixed) return
-        this.setStateElements(clone, el, state)
-        return
-      }
-      Object.keys(src).map(prop => {
-        if (prop === 'async') {
-          el.async = src[prop]
-          return
-        }
-        if (prop === 'inner') {
-          el.textContent = src[prop]
-          return
-        }
-        el.setAttribute(prop, src[prop])
-      })
-      // If fixed
-      place.appendChild(el)
-      if (!objScript.fixed) {
-        state.after = el
-        state.place = tag
-        diff.push(state)
-      }
+      if (obj.body) parent = this.getPlace('body')
+      parent.appendChild(el)
+      if (obj.undo !== undefined && !obj.undo) return
+      els.push(el)
     })
   }
 }
 
-export const head = {
+export const VueHead = {
   ready () {
-    let self = this
     let head = this.$options.head
     if (!head) return
-    Object.keys(head).map((key) => {
-      if (head[key]) {
-        let obj = (typeof head[key] === 'object') ? head[key] : head[key].bind(self)()
+    Object.keys(head).map(key => {
+      let prop = head[key]
+      if (!prop) return
+      let obj = (typeof prop === 'function') ? head[key].bind(this)() : head[key]
+      if (key === 'title') {
         util[key](obj)
+        return
       }
+      util.common(obj, key, 'head')
     })
   },
   destroyed () {
     let head = this.$options.head
-    if (head.undo || typeof head.undo === 'undefined') {
+    if (head.title.undo) {
       util.undoTitle(diffTitle)
-      util.undo(diff)
     }
-    diff = []
+    util.undo()
   }
 }

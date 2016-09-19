@@ -81,9 +81,7 @@
   import TopPage from './TopPages'
   import Separate from '../Common/Separate'
   import Tag from '../Common/Tags'
-  import { head } from '../../plugins/head'
   export default {
-    extends: head,
     data () {
       return {
         info: {
@@ -119,19 +117,13 @@
       title: {
         inner: 'Sobre mim'
       },
-      meta () {
-        return {
-          name: {
-            description: 'Conheça um pouco mais sobre mim, sou FullStack Web Developer, focado em PHP e Javascript ...'
-          }
-        }
-      },
+      meta: [
+        { n: 'description', id: 'description', c: 'Conheça um pouco mais sobre mim, sou FullStack Web Developer, focado em PHP e Javascript ...' }
+      ],
       link () {
-        return {
-          canonical: {
-            href: this.$el.baseURI + '/'
-          }
-        }
+        return [
+          { r: 'canonical', h: this.$el.baseURI + '/', id: 'canonical' }
+        ]
       }
     },
     components: {

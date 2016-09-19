@@ -72,9 +72,7 @@
 <script>
   import TopPage from './TopPages'
   import Separate from '../Common/Separate'
-  import { head } from '../../plugins/head'
   export default {
-    extends: head,
     data () {
       return {
         info: {
@@ -87,19 +85,13 @@
       title: {
         inner: 'Contribuição, sempre'
       },
-      meta () {
-        return {
-          name: {
-            description: 'Desenvolvendo e participando de projetos abertos, passando conhecimento, aprendendo e contribuindo para a web ser ainda mais impressionante'
-          }
-        }
-      },
+      meta: [
+        { n: 'description', id: 'description', c: 'Desenvolvendo e participando de projetos abertos, passando conhecimento, aprendendo e contribuindo para a web ser ainda mais impressionante' }
+      ],
       link () {
-        return {
-          canonical: {
-            href: this.$el.baseURI + '/'
-          }
-        }
+        return [
+          { r: 'canonical', h: this.$el.baseURI + '/', id: 'canonical' }
+        ]
       }
     },
     components: {

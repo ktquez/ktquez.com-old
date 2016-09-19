@@ -49,9 +49,7 @@
   import Tag from '../Common/Tags'
   import { getPosts, getCurrentPost, getLang } from '../../vuex/getters'
   import { setPosts, setCurrentPost } from '../../vuex/actions'
-  import { head } from '../../plugins/head'
   export default {
-    extends: head,
     data () {
       return {
         post: '',
@@ -65,18 +63,19 @@
         }
       },
       meta () {
-        return {
-          name: {
-            description: this.currentPost.description.substr(0, 130)
-          }
-        }
+        return [
+          { n: 'description', id: 'description', c: this.currentPost.description.substr(0, 130) }
+        ]
       },
       link () {
-        return {
-          canonical: {
-            href: this.currentPost.link + '/'
-          }
-        }
+        return [
+          { r: 'canonical', h: this.currentPost.link + '/', id: 'canonical' }
+        ]
+      }
+    },
+    events: {
+      'ok-head' () {
+        console.log('oi')
       }
     },
     components: {

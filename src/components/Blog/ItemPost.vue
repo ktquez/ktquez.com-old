@@ -18,7 +18,7 @@
       {{ post.description }}
     </p>
     <!-- <a class="link see-more fade-half" v-link="{ name: 'article', params: { slug: post.slug }}" title="{{ post.title }}">LER MAIS</a> -->
-  </article>    
+  </article>  
 </template>
 
 <script>

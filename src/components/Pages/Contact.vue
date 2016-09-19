@@ -18,19 +18,25 @@
 </template>
 
 <script>
-  import { head } from '../../plugins/head'
   export default {
-    extends: head,
+    data () {
+      return {
+        txt: 'Hello'
+      }
+    },
     head: {
       title: {
         inner: 'Será um prazer'
       },
+      meta () {
+        return [
+          { n: 'description', c: 'Freelancer web developer PHP e Javascript, autodidata, tentando escrever coisas relevantes e criando screencasts interessantes', id: 'description' }
+        ]
+      },
       link () {
-        return {
-          canonical: {
-            href: this.$el.baseURI + '/'
-          }
-        }
+        return [
+          { r: 'canonical', h: this.$el.baseURI + '/', id: 'canonical' }
+        ]
       }
     }
   }
@@ -66,6 +72,5 @@
   .content-page {
     margin-bottom: 100px;
   }
-
 
 </style>

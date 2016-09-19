@@ -12,7 +12,7 @@
     <search></search>
     <scroll-top></scroll-top>
     <hamburger></hamburger>
-    <menu-mobile></menu-mobile>   
+    <menu-mobile></menu-mobile>  
   </div>
 </template>
 

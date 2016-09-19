@@ -6,6 +6,7 @@ import store from './vuex/store'
 import App from './components/App'
 import { routes } from './routes'
 import config from '../config/index'
+import VueHead from 'vue-head'
 
 // Set default options in vue Resource
 Vue.use(VueResource)
@@ -32,6 +33,8 @@ router.afterEach((transition) => {
 router.redirect({
   '/': '/blog'
 })
+
+Vue.use(VueHead)
 
 // Sync Vue-router with Store Vuex
 sync(store, router)
