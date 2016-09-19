@@ -48,6 +48,7 @@
         ]
       }
     },
+    replace: false,
     components: {
       Top,
       Hamburger,

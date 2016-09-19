@@ -21,7 +21,11 @@
   export default {
     data () {
       return {
-        txt: 'Hello'
+        txt: 'Hello',
+        info: {
+          description: 'Freelancer web developer PHP e Javascript, autodidata, tentando escrever coisas relevantes e criando screencasts interessantes',
+          image: require('../../assets/recife-ktquez1.png')
+        }
       }
     },
     head: {
@@ -30,7 +34,24 @@
       },
       meta () {
         return [
-          { n: 'description', c: 'Freelancer web developer PHP e Javascript, autodidata, tentando escrever coisas relevantes e criando screencasts interessantes', id: 'description' }
+          { n: 'description', c: this.info.description, id: 'description' },
+          // Facebook
+          { p: 'og:type', c: 'website' },
+          { p: 'og:title', c: document.title },
+          { p: 'og:description', c: this.info.description },
+          { p: 'og:image', c: this.info.image },
+          { p: 'og:site_name', c: 'Alan Albuquerque - Fullstack Web Developer' },
+          { p: 'og:locale', c: 'pt_BR' },
+          // Twitter
+          { n: 'twitter:site', c: '@ktquez' },
+          { n: 'twitter:creator', c: '@ktquez' },
+          { n: 'twitter:title', c: document.title },
+          { n: 'twitter:description', c: this.info.description },
+          { p: 'twitter:image', c: this.info.image },
+          // Google
+          { ip: 'name', c: document.title },
+          { ip: 'description', c: this.info.description },
+          { ip: 'image', c: this.info.image }
         ]
       },
       link () {

@@ -86,7 +86,8 @@
       return {
         info: {
           title: 'BIO',
-          description: 'Seja bem vindo! Saiba um pouco mais sobre'
+          description: 'Conheça um pouco mais sobre mim, sou FullStack Web Developer, focado em PHP e Javascript ...',
+          image: require('../../assets/about.png')
         },
         skills: [
           'PHP',
@@ -114,12 +115,33 @@
       }
     },
     head: {
-      title: {
-        inner: 'Sobre mim'
+      title () {
+        return {
+          inner: this.info.title
+        }
       },
-      meta: [
-        { n: 'description', id: 'description', c: 'Conheça um pouco mais sobre mim, sou FullStack Web Developer, focado em PHP e Javascript ...' }
-      ],
+      meta () {
+        return [
+          { n: 'description', id: 'description', c: this.info.description },
+          // Facebook
+          { p: 'og:type', c: 'website' },
+          { p: 'og:title', c: document.title },
+          { p: 'og:description', c: this.info.description },
+          { p: 'og:image', c: this.info.image },
+          { p: 'og:site_name', c: 'Alan Albuquerque - Fullstack Web Developer' },
+          { p: 'og:locale', c: 'pt_BR' },
+          // Twitter
+          { n: 'twitter:site', c: '@ktquez' },
+          { n: 'twitter:creator', c: '@ktquez' },
+          { n: 'twitter:title', c: document.title },
+          { n: 'twitter:description', c: this.info.description },
+          { p: 'twitter:image', c: this.info.image },
+          // Google
+          { ip: 'name', c: document.title },
+          { ip: 'description', c: this.info.description },
+          { ip: 'image', c: this.info.image }
+        ]
+      },
       link () {
         return [
           { r: 'canonical', h: this.$el.baseURI + '/', id: 'canonical' }

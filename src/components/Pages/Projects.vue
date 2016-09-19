@@ -77,7 +77,8 @@
       return {
         info: {
           title: 'PROJETOS',
-          description: 'Onde desenvolvo e participo'
+          description: 'Desenvolvendo e participando de projetos abertos, passando conhecimento, aprendendo e contribuindo para a web ser ainda mais impressionante',
+          image: require('../../assets/avatar.png')
         }
       }
     },
@@ -85,9 +86,28 @@
       title: {
         inner: 'Contribuição, sempre'
       },
-      meta: [
-        { n: 'description', id: 'description', c: 'Desenvolvendo e participando de projetos abertos, passando conhecimento, aprendendo e contribuindo para a web ser ainda mais impressionante' }
-      ],
+      meta () {
+        return [
+          { n: 'description', id: 'description', c: this.info.description },
+          // Facebook
+          { p: 'og:type', c: 'website' },
+          { p: 'og:title', c: document.title },
+          { p: 'og:description', c: this.info.description },
+          { p: 'og:image', c: this.info.image },
+          { p: 'og:site_name', c: 'Alan Albuquerque - Fullstack Web Developer' },
+          { p: 'og:locale', c: 'pt_BR' },
+          // Twitter
+          { n: 'twitter:site', c: '@ktquez' },
+          { n: 'twitter:creator', c: '@ktquez' },
+          { n: 'twitter:title', c: document.title },
+          { n: 'twitter:description', c: this.info.description },
+          { p: 'twitter:image', c: this.info.image },
+          // Google
+          { ip: 'name', c: document.title },
+          { ip: 'description', c: this.info.description },
+          { ip: 'image', c: this.info.image }
+        ]
+      },
       link () {
         return [
           { r: 'canonical', h: this.$el.baseURI + '/', id: 'canonical' }

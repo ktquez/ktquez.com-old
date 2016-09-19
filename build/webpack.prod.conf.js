@@ -8,6 +8,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var CleanWebpackPlugin = require('clean-webpack-plugin')
+var PrerenderSpaPlugin = require('prerender-spa-plugin')
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : config.build.env
@@ -64,6 +65,16 @@ module.exports = merge(baseWebpackConfig, {
         warnings: false
       }
     }),
+    new PrerenderSpaPlugin(
+      config.build.assetsRoot,
+      ['/about', '/projects', '/contact'],
+      {
+        captureAfterTime: 5000,
+        maxAttempts: 10,
+        phantomOptions: '--disk-cache=true',
+        phantomPageSettings: { loadImages: true }
+      }
+    ),
     new webpack.optimize.OccurenceOrderPlugin(),
     // extract css into its own file
     new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css')),
