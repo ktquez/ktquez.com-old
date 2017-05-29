@@ -29,7 +29,6 @@
   import ShortAbout from './ShortAbout'
   import ItemPost from './ItemPost'
   import Separate from '../Common/Separate'
-  import config from 'config'
   import { getPosts, getLang } from '../../vuex/getters'
   import { setPosts } from '../../vuex/actions'
 
@@ -78,7 +77,7 @@
           return
         }
         // In another way get posts by ajax
-        this.$http.get(`${config.dev.url}/static/articles/${this.getLang}/_data.json`).then((response) => {
+        this.$http.get(`static/articles/${this.getLang}/_data.json`).then((response) => {
           this.setPosts(response.data.reverse())
           transition.next()
         }).catch((response) => {
