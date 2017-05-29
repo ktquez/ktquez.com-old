@@ -62,6 +62,30 @@
                 Layouts e desenvolvimento que faço para alguns projetos.
               </p>
             </li>
+            <li class="item">
+              <a class="link" title="Comunidade e futura conferência Vue.js na Europa" target="_blank" href="https://vue-europe.org/">
+                <b>Vue Europe</b>
+              </a>
+              <p class="description">
+                Comunidade e futura conferência Vue.js na Europa.
+              </p>
+            </li>
+            <li class="item">
+              <a class="link" title="Platform for users earn Bitcoin by waking at the scheduled time" target="_blank" href="http://betternot.rest/">
+                <b>Better not rest</b>
+              </a>
+              <p class="description">
+                Platform for users earn Bitcoin by waking at the scheduled time
+              </p>
+            </li>
+            <li class="item">
+              <a class="link" title="#" target="_blank" href="#">
+                <b>Impresssd</b>
+              </a>
+              <p class="description">
+                Em breve
+              </p>
+            </li>
           </ul>        
         </div>
       </div>
