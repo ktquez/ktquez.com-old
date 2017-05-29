@@ -8,25 +8,29 @@
       <div class="fullX content-page">
         <figure>
           <img src="../../assets/about.png" class="fullX img-about" alt="Alan Albuquerque - ktquez">
-          <figcaption class="fullX caption tac">Eu, ela, uma filha e dois cachorros</figcaption>          
+          <figcaption class="fullX caption tac">♫♫ Eu, ela, uma filha e dois cachorros...</figcaption>          
         </figure>
         <div class="fullX content-bio">
           <h2 class="fullX title">OLÁ, EU SOU ALAN</h2>
           
           <p class="txt">
-            Entrei no mundo da internet a aproximadamente 6 anos, cursando um profissionalizante de Administrador de redes e servidores pela instituição SENAC, foi um conhecimento primordial para amar a web, onde obtive intimidade com linha de comando e protocolos como o essencial HTTP.
+            Sou um autodidata de carteirinha, buscava conhecimento desde a época da internet discada (onde só podíamos usar na madrugada). A aproximadamente 10 anos iniciei como suporte de redes e servidores, foi um conhecimento primordial para me levar a conhecer a web e me apaixonar por ela. (I love HTTP).
           </p>
           
           <p class="txt">          
-            Após finalizar o curso, comecei a estudar por conta própria desenvolvimento web, suas ferramentas e tecnologias.
+            A facilidade em ser autodidata é puder ter a liberdade e a facilidade de aprender rapidamente uma nova tecnologia, me dando a oportunidade de criar incríveis sites e aplicações web.
           </p>
           
           <p class="txt">          
-            Com mais ênfase como Web Developer, me aventurei no boom das compras coletivas lançando um aplicação desenvolvida por mim, com checkout, envio email marketing, gerenciamento de leed, mídias sociais e etc. O Site ficou no ar durante um ano e meio, aprendi bastante nesse período, principalmente na lógica de negócio e na resolução de problemas críticos. =)
+            Desenvolvo para web a 6 anos, já empreendi em sites de compra coletiva, classificados no ramo de festas e até mesmo em redes sociais para um público com um estilo de vida Paleo.
           </p>
           
           <p class="txt">          
-            Atualmente (com 28 anos) com uma experiência de aproximadamente 5 anos com desenvolvimento web, me encontro disponível para trabalho remoto utilizando as tecnologias PHP e Javascript, onde meu foco está virado com carinho nesse momento, aprendendo muito e passando o máximo possível de conhecimento para a comunidade.
+            Venho trabalhando remotamente a 2 anos em diversos projetos como Freelancer, utilizando com maior habilidade PHP (Laravel/Lumen) e javascript (Vue.js e Vanilla), contribuindo ativamente na comunidade 
+            <a class="link" href="https://www.facebook.com/groups/vuejsbr/" target="_blank" title="Vue.js Brasil">Vue Brasil</a> e 
+            <a class="link" href="https://vue-europe.org/" target="_blank" title="Vue.js Europe">Vue Europe</a>, também disponibilizando projetos no 
+            <a class="link" href="https://github.com/ktquez" title="Minhas contribuíções no github" target="_blank">Github</a> e no início de um projeto pessoal de passar conhecimento através de cursos em vídeo, treinamentos e palestras através do 
+            <a class="link" href="https://www.youtube.com/ktquez" title="Meu canal no Youtube" target="_blank">meu canal</a>.
           </p>            
 
           <h2 class="fullX title">NO QUE ESTOU FOCADO</h2>
@@ -67,7 +71,7 @@
 
           <h2 class="fullX title">CONTATO</h2>          
           <p class="txt">
-          Sou capaz de ajudá-lo nessas tecnologias, caso queira entrar em contato para batermos um papo, tirar alguma dúvida ou disposição para me contratar
+          Caso queira entrar em contato para batermos um papo, tomar um café, tirar alguma dúvida ou convite para algum projeto incrível.
           <br> Me siga no <b>Twitter:</b> <a class="link" href="https://twitter.com/ktquez" target="_blank">@ktquez</a>, no <b>Github:</b> <a class="link" href="https://github.com/ktquez" target="_blank">@ktquez</a> e/ou através do <a class="link" href="mailto:ktquez@gmail.com">ktquez@gmail.com</a>
           </p>
 
@@ -96,20 +100,21 @@
           'API RESTful',
           'Javascript Vanilla',
           'Vue.js',
-          'Webpack e Gulp',
-          'PostCSS / NextCSS',
+          'Webpack',
+          'PostCSS',
           'GIT',
           'SEO',
           'Web performance',
-          'Clean code'
+          'Clean code',
+          'Docker',
+          'NGINX'
         ],
         moreSkills: [
-          'ElasticSearch',
-          'Docker',
-          'NGINX',
           'SVG',
-          'AngularJS',
-          'React',
+          'Angular JS',
+          'Web prototyping',
+          'Mobile development',
+          'Adobe XD',
           'UX / UI'
         ]
       }

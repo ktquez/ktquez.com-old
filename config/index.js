@@ -12,7 +12,7 @@ module.exports = {
     productionSourceMap: true
   },
   dev: {
-    url: 'http://www.ktquez.com',
+    url: 'http://ktquez.dev',
     env: require('./dev.env'),
     port: 80,
     proxyTable: {}

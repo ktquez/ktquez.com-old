@@ -64,8 +64,8 @@
 
 <style lang="postcss">
 
-  @import "~normalize.css";
-  @import "~highlight.js/styles/hybrid.css";
+  @import "normalize.css";
+  @import "highlight.js/styles/hybrid.css";
   @import "~../assets/css/fonts.css";
   @import "../assets/css/noDoubt.css";
 
