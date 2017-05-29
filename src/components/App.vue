@@ -41,6 +41,11 @@
             name: 'github'
           },
           {
+            href: 'https://youtube.com/ktquez',
+            title: 'My tutorial videos, courses and training',
+            name: 'youtube'
+          },
+          {
             href: 'https://www.behance.net/alanktquez',
             title: 'I"m no expert, but I do cool stuff',
             name: 'behance'
